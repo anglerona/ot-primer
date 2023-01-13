@@ -1,4 +1,4 @@
-package com.example.backend_server.UserLogin;
+package com.backend.backend_server.UserLogin;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
