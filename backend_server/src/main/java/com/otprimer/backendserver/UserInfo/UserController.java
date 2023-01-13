@@ -1,7 +1,11 @@
-package com.backend.backend_server.UserLogin;
+package com.otprimer.backendserver.UserInfo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 
 @RestController // This allows for automatic response body
 @RequestMapping(path="/")

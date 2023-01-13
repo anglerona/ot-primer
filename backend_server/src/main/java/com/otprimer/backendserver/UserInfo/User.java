@@ -1,4 +1,4 @@
-package com.backend.backend_server.UserLogin;
+package com.otprimer.backendserver.UserInfo;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -15,21 +15,21 @@ import javax.persistence.GenerationType;
 public class User {
     private @Id
     @GeneratedValue
-    Long id;
+    Integer id;
 
-    private String USERNAME;
+    private String USERID;
     public User(){}
 
-    User(String USERNAME){
-        this.USERNAME = USERNAME;
+    User(String USERID){
+        this.USERID = USERID;
     }
 
-    public String get_USERNAME(){
-        return this.USERNAME;
+    public String get_USERID(){
+        return this.USERID;
     }
 
-    public void set_USERNAME(String USERNAME){
-        this.USERNAME = USERNAME;
+    public void set_USERID(String USERID){
+        this.USERID = USERID;
     }
 
 
