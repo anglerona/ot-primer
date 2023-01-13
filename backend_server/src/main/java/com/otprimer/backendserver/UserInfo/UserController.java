@@ -1,4 +1,5 @@
-package com.example.backend_server.UserLogin;
+package com.otprimer.backendserver.UserInfo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
