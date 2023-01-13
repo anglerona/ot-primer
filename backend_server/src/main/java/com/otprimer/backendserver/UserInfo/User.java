@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 
 
 @Entity
-@Table(name="Username", schema = "public")
+@Table(name="Username", schema = "public" )
 public class User {
     private @Id
     @GeneratedValue
@@ -32,5 +32,11 @@ public class User {
         this.USERID = USERID;
     }
 
+    public Integer getId(){
+        return this.id;
+    }
+    public void setId(Integer id){
+        this.id = id;
+    }
 
 }
