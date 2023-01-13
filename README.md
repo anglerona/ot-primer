@@ -13,3 +13,6 @@ npm run dev
 
 3. Open `http://localhost:3000` in your browser
 ## Getting Started (Backend)
+
+Connecting postgresql and java
+1. https://www.youtube.com/watch?v=efEnx9G7_Rs
