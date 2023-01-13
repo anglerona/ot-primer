@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 
 
 @Entity
-@Table(name="Username")
+@Table(name="Username", schema = "public")
 public class User {
     private @Id
     @GeneratedValue
