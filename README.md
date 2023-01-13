@@ -16,3 +16,5 @@ npm run dev
 
 Connecting postgresql and java
 1. https://www.youtube.com/watch?v=efEnx9G7_Rs
+
+2. Running on `http://localhost:8080`, add endpoints to end of this url
