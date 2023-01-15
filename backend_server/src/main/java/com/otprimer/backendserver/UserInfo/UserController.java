@@ -6,10 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @RestController // This allows for automatic response body
 @RequestMapping(path="/")
@@ -33,7 +30,7 @@ public class UserController{
 
 
     @GetMapping(path="/getMovies")
-    public void getMovies(){
+    public @ResponseBody List<Object> getMovies(){
         String url = "https://api.themoviedb.org/3/trending/movie/day?api_key=781cd82e7790ae7403010d9f126bcc2c";
         //String url = "https://jsonplaceholder.typicode.com/users/";
         RestTemplate restTemplate = new RestTemplate();
@@ -41,7 +38,7 @@ public class UserController{
 //        Object[] movies = restTemplate.getForObject(url, Object[].class);
 //        return Arrays.asList(movies);
 
-
+       
 
     }
 }
