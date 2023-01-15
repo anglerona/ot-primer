@@ -38,7 +38,7 @@ public class UserController{
 //        Object[] movies = restTemplate.getForObject(url, Object[].class);
 //        return Arrays.asList(movies);
 
-       
+
 
     }
 }
