@@ -23,17 +23,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_78_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/BackendServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/test/java/backend_server/example/backend_server/BackendServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +80,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -75,12 +92,14 @@
       <recent name="com.backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com\otprimer\backendserver" />
       <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com.otprimer.backendserver" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="BackendServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="BackendServerApplication1" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.otprimer.backendserver.BackendServerApplication" />
+      <module name="backend_server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.backend_server.*" />
@@ -93,7 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BackendServerApplication" />
+        <item itemvalue="Application.BackendServerApplication1" />
       </list>
     </recent_temporary>
   </component>
@@ -186,14 +205,19 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2506" y="194" key="#Inspections/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673624152109" />
-    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1673626802251">
-      <screen x="1920" y="0" width="1920" height="1032" />
+    <state x="331" y="135" width="874" height="589" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1673828420758">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626802251" />
+    <state x="331" y="135" width="874" height="589" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1673828420758" />
     <state x="2596" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1673626632199">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2596" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626632199" />
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1673828400110">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1673828400110" />
     <state x="2437" y="440" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1673626340600">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
@@ -214,26 +238,26 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2660" y="271" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673620680848" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673827237874">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673829554867">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673827237874">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673829554867">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673827237874">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673829554867">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673827237874">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673829554867">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
     <state x="2410" y="171" key="Maven.ArtifactSearchDialog" timestamp="1673624414359">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>

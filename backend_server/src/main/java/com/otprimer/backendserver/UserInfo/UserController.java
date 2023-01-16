@@ -2,6 +2,9 @@ package com.otprimer.backendserver.UserInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.http.HttpStatus;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -29,16 +32,17 @@ public class UserController{
     }
 
 
-    @GetMapping(path="/getMovies")
-    public @ResponseBody List<Object> getMovies(){
-        String url = "https://api.themoviedb.org/3/trending/movie/day?api_key=781cd82e7790ae7403010d9f126bcc2c";
-        //String url = "https://jsonplaceholder.typicode.com/users/";
-        RestTemplate restTemplate = new RestTemplate();
-
-        Object[] movies = restTemplate.getForObject(url, Object[].class);
-        return Arrays.asList(movies);
-
-
-
+    @GetMapping("/getMovies")
+    public ResponseEntity<?> getMovies() {
+        //Source: https://mercyjemosop.medium.com/consume-external-api-spring-boot-7e2c684e3d00
+        try {
+            String uri="https://api.themoviedb.org/3/trending/movie/day?api_key=781cd82e7790ae7403010d9f126bcc2c";
+            RestTemplate restTemplate = new RestTemplate();
+            String result = restTemplate.getForObject(uri, String.class);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>("Error!, Please try again", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
