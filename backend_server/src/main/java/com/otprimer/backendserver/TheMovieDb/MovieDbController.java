@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController // This allows for automatic response body
 @RequestMapping(path="/")
 public class MovieDbController{
-    @GetMapping("/getMovies")
+    @GetMapping("/movies")
     public ResponseEntity<?> getMovies() {
         //Source: https://mercyjemosop.medium.com/consume-external-api-spring-boot-7e2c684e3d00
         try {

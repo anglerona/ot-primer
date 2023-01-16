@@ -18,7 +18,7 @@ public class ReviewInfoController {
 
 
 
-    @GetMapping(path="/getReviewInfo")
+    @GetMapping(path="/reviewinfo")
     public @ResponseBody Iterable<ReviewInfo> getReviewInfo() {
         // This returns a JSON or XML with the users
         return this.reviewInfoRepository.findAll();
