@@ -23,7 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/BackendServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/test/java/backend_server/example/backend_server/BackendServerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +74,13 @@
       <recent name="backend_server" />
       <recent name="com.backend" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com.otprimer.backendserver" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="BackendServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.otprimer.backendserver.BackendServerApplication" />
-      <module name="backend_server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.backend_server.*" />
@@ -166,7 +178,8 @@
     <MESSAGE value="minor changes to backend code. Ready to add additional controls to backend API" />
     <MESSAGE value="." />
     <MESSAGE value="readme changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme changes" />
+    <MESSAGE value="Added stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2506" y="194" key="#Inspections" timestamp="1673624152109">
@@ -201,26 +214,26 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2660" y="271" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673620680848" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673826990669">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673827237874">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673826990669" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673826990669">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673827237874">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673826990669" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673826990669">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673827237874">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673826990669" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673826990669">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673827237874">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673826990669" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673827237874" />
     <state x="2410" y="171" key="Maven.ArtifactSearchDialog" timestamp="1673624414359">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>

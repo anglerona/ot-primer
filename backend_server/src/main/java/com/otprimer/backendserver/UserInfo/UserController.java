@@ -35,8 +35,8 @@ public class UserController{
         //String url = "https://jsonplaceholder.typicode.com/users/";
         RestTemplate restTemplate = new RestTemplate();
 
-//        Object[] movies = restTemplate.getForObject(url, Object[].class);
-//        return Arrays.asList(movies);
+        Object[] movies = restTemplate.getForObject(url, Object[].class);
+        return Arrays.asList(movies);
 
 
 
