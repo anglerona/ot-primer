@@ -29,10 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
-      <change afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/TheMovieDb/MovieDbController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/TheMovieDb/MovieDbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/TheMovieDb/MovieDbController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +227,10 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2673" y="397" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626342154" />
+    <state x="454" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1673893007417">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="454" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1673893007417" />
     <state x="2747" y="266" key="EnvironmentVariablesDialog" timestamp="1673621166949">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
@@ -233,26 +239,26 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2660" y="271" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673620680848" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673886556162">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673893162634">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673886556162" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673886556162">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673893162634">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673886556162" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673886556162">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673893162634">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673886556162" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673886556162">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673893162634">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673886556162" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
     <state x="2410" y="171" key="Maven.ArtifactSearchDialog" timestamp="1673624414359">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>

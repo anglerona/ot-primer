@@ -1,18 +1,14 @@
-package com.otprimer.backendserver.UserInfo;
+package com.otprimer.backendserver.Review;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.Enumerated;
-import javax.persistence.EnumType;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 
 
 @Entity
-@Table(name="UserInfo", schema = "public" )
-public class User {
+@Table(name="ReviewInfo", schema = "public" )
+public class ReviewInfo {
     private @Id
     @GeneratedValue
     Integer id;
@@ -24,9 +20,9 @@ public class User {
 
 
 
-    public User(){}
+    public ReviewInfo(){}
 
-    User(String userID, Long movieID, String comment, Integer vote){
+    ReviewInfo(String userID, Long movieID, String comment, Integer vote){
         this.userID = userID;
         this.movieID = movieID;
         this.comment = comment;
