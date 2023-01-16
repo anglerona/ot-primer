@@ -22,35 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_78_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_21.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/UserInfo/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,26 +210,26 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state x="2660" y="271" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673620680848" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673829554867">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673830043696">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673829554867">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673830043696" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673830043696">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673829554867">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673830043696" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673830043696">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673829554867">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673830043696" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673830043696">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673829554867" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673830043696" />
     <state x="2410" y="171" key="Maven.ArtifactSearchDialog" timestamp="1673624414359">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
