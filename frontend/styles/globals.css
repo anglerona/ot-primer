@@ -23,6 +23,31 @@
   flex-wrap: wrap;
 }
 
+#add-comment-container {
+  width: 50%;
+  background-color: #d3d3d3;
+  margin-bottom: 20px;
+}
+
+#add-comment-forms {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#single-comment-container {
+  width: 50%;
+  height: 100px;
+  background-color: #d3d3d3;
+}
+
 #single-movie-container {
   display: flex;
   flex-direction: column;
@@ -103,4 +128,21 @@ img {
 input {
   font: 0.75em/1em Arial, Helvetica, sans-serif;
   padding: 5px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: "20px";
+}
+
+.user-name {
+  float: left;
+}
+
+.log-out {
+  float: right;
+  margin: 10px;
 }
