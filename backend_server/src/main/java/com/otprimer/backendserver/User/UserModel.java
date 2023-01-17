@@ -1,9 +1,9 @@
 package com.otprimer.backendserver.User;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
+import com.otprimer.backendserver.Review.ReviewInfo;
+
+import javax.persistence.*;
+import java.util.Set;
 
 
 @Entity
@@ -15,10 +15,15 @@ public class UserModel {
 
     private String user_name;
 
+    @OneToMany(mappedBy = "user")
+    private Set<ReviewInfo> review;
+
+
     public UserModel(){
     }
 
-    UserModel(String user_name){
+    UserModel(String user_name, Set<ReviewInfo> review){
+        this.review = review;
         this.user_name = user_name;
     }
 
@@ -26,9 +31,11 @@ public class UserModel {
     public Integer getId(){
         return this.id;
     }
+    public Set<ReviewInfo> getReview(){return this.review;}
 
     public void setId(Integer id){
         this.id = id;
     }
     public void setUserName(String user_name){this.user_name = user_name;}
+    public void setReview(Set<ReviewInfo> review){this.review = review;}
 }
