@@ -2,6 +2,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import Comment from "../components/Comment";
 
 interface MovieProperties {
   title: String;
@@ -47,6 +48,9 @@ export default function Home() {
         Top 5 Movies within the last 24 Hours
       </h3>
       <div id="movie-container">{listItems}</div>
+      <div id="comment-container">
+        <Comment></Comment>
+      </div>
     </>
   );
 }

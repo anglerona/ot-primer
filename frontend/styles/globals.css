@@ -23,6 +23,19 @@
   flex-wrap: wrap;
 }
 
+#comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#single-comment-container {
+  width: 50%;
+  height: 100px;
+  background-color: #d3d3d3;
+}
+
 #single-movie-container {
   display: flex;
   flex-direction: column;

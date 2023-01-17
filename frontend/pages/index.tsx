@@ -9,7 +9,6 @@ export default function Home() {
     setUsername(e.target.value);
   };
   const submitUser = async (e) => {
-    e.preventDefault();
     const resp = await axios.post("http://localhost:3000/", { username });
     resp.data.json;
   };
