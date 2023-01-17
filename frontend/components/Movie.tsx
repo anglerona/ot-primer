@@ -1,3 +1,5 @@
+import Like from "../components/Likes";
+
 interface MovieProperties {
   movieTitle: String;
   movieImg: String;
@@ -12,6 +14,7 @@ export default function Movie(props: MovieProperties) {
         alt="Movie Poster"
         src={"https://image.tmdb.org/t/p/original/" + movieImg}
       ></img>
+      <Like></Like>
     </div>
   );
 }

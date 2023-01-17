@@ -27,11 +27,13 @@ export default function Home() {
   }, []);
 
   const listItems = movieList.map((movie) => (
-    <Movie
-      key={movie.id}
-      movieTitle={movie.title}
-      movieImg={movie.poster_path}
-    ></Movie>
+    <>
+      <Movie
+        key={movie.id}
+        movieTitle={movie.title}
+        movieImg={movie.poster_path}
+      ></Movie>
+    </>
   ));
 
   return (
