@@ -1,10 +1,10 @@
 package com.otprimer.backendserver.Movie;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
+import com.otprimer.backendserver.Review.ReviewInfo;
+
+import javax.persistence.*;
+import java.util.Set;
 
 
 @Entity
@@ -14,19 +14,20 @@ public class MovieModel {
     @GeneratedValue
     Integer id;
 
-    //foreign key
-    private Integer review_id;
+
+
+    @OneToMany(mappedBy = "movie")
+    private Set<ReviewInfo> review;
+
 
     public MovieModel(){}
 
-    MovieModel(Integer review_id){
-        this.review_id = review_id;
+    MovieModel(Set<ReviewInfo> review){
+        this.review = review;
     }
 
-
-
-    public Integer getReviewID(){
-        return this.review_id;
+    public Set<ReviewInfo> getReview(){
+        return this.review;
     }
     public Integer getId(){
         return this.id;
@@ -35,10 +36,8 @@ public class MovieModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setReviewID(Integer review_id){
-        this.review_id= review_id;
+    public void setReviewID(Set<ReviewInfo> review){
+        this.review= review;
     }
-
-
 
 }

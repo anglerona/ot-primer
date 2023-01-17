@@ -1,10 +1,10 @@
 package com.otprimer.backendserver.Comment;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
+import com.otprimer.backendserver.Review.ReviewInfo;
+import com.otprimer.backendserver.User.UserModel;
+
+import javax.persistence.*;
 
 
 @Entity
@@ -15,22 +15,25 @@ public class CommentModel {
     Integer id;
 
     private String comment;
-    private Integer user_id;
-    private Integer review_id;
+
+    @OneToOne(mappedBy = "comment")
+    private UserModel user;
+    @OneToOne(mappedBy = "comment")
+    private ReviewInfo review;
 
     public CommentModel(){}
 
-    CommentModel(String comment, Integer user_id, Integer review_id){
+    CommentModel(String comment, UserModel user, ReviewInfo review){
         this.comment = comment;
-        this.user_id = user_id;
-        this.review_id = review_id;
+        this.user = user;
+        this.review = review;
     }
 
-    public Integer getUserID(){
-        return this.user_id;
+    public UserModel getUserID(){
+        return this.user;
     }
-    public Integer getReviewID(){
-        return this.review_id;
+    public ReviewInfo getReviewID(){
+        return this.review;
     }
     public String getComment(){
         return this.comment;
@@ -42,11 +45,11 @@ public class CommentModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setUserID(Integer user_id){
-        this.user_id = user_id;
+    public void setUserID(UserModel user){
+        this.user = user;
     }
-    public void setReviewID(Integer review_id){
-        this.review_id = review_id;
+    public void setReviewID(ReviewInfo review){
+        this.review = review;
     }
     public void setComment(String comment){
         this.comment = comment;

@@ -1,10 +1,11 @@
 package com.otprimer.backendserver.Review;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-
+import javax.persistence.*;
+import com.otprimer.backendserver.User.UserModel;
+import com.otprimer.backendserver.Movie.MovieModel;
+import com.otprimer.backendserver.Comment.CommentModel;
+import com.otprimer.backendserver.Vote.VoteModel;
+import org.apache.catalina.User;
 
 @Entity
 @Table(name="ReviewInfo", schema = "public" )
@@ -13,33 +14,44 @@ public class ReviewInfo {
     @GeneratedValue
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
-    private Integer user_id;
-    private Integer movie_id;
-    private Integer comment_id;
-    private Integer vote_id;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private UserModel user;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "movie_id", referencedColumnName = "id")
+    private MovieModel movie;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "comment_id", referencedColumnName = "id")
+    private CommentModel comment;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "vote_id", referencedColumnName = "id")
+    private VoteModel vote;
 
 
     public ReviewInfo(){}
 
-    ReviewInfo(Integer user_id, Integer movie_id, Integer comment_id, Integer vote_id){
-        this.user_id = user_id;
-        this.movie_id = movie_id;
-        this.comment_id = comment_id;
-        this.vote_id = vote_id;
+    ReviewInfo(UserModel user, MovieModel movie, CommentModel comment, VoteModel vote){
+        this.user= user;
+        this.movie = movie;
+        this.comment = comment;
+        this.vote = vote;
     }
 
-    public Integer getUserID(){
-        return this.user_id;
+    public UserModel getUserID(){
+        return this.user;
     }
-    public Integer getMovieID(){
-        return this.movie_id;
+    public MovieModel getMovieID(){
+        return this.movie;
     }
-    public Integer getCommentID(){
-        return this.comment_id;
+    public CommentModel getCommentID(){
+        return this.comment;
     }
-    public Integer getVoteID(){
-        return this.vote_id;
+    public VoteModel getVoteID(){
+        return this.vote;
     }
     public Integer getId(){
         return this.id;
@@ -48,17 +60,17 @@ public class ReviewInfo {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setUserID(Integer userID){
-        this.user_id = user_id;
+    public void setUserID(UserModel user){
+        this.user = user;
     }
-    public void setMovieID(Integer movieID){
-        this.movie_id = movie_id;
+    public void setMovieID(MovieModel movie){
+        this.movie = movie;
     }
-    public void setComment(String commentID) {
-        this.comment_id = comment_id;
+    public void setComment(CommentModel comment) {
+        this.comment = comment;
     }
-    public void setVote(Integer voteID){
-        this.vote_id = vote_id;
+    public void setVote(VoteModel vote){
+        this.vote = vote;
     }
 
 
