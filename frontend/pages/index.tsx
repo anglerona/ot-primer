@@ -29,7 +29,7 @@ export default function Home() {
           ></input>
         </label>
         <div id="column">
-          <Link href="/main">
+          <Link href={{ pathname: "/main", query: { username: username } }}>
             <input
               type="submit"
               value="Login / Sign Up"
