@@ -48,11 +48,9 @@ public class ReviewInfo {
     public void setId(Integer id){
         this.id = id;
     }
-
     public void setUserID(String userID){
         this.userID = userID;
     }
-
     public void setMovieID(Long movieID){
         this.movieID = movieID;
 
@@ -61,7 +59,6 @@ public class ReviewInfo {
         this.comment = comment;
 
     }
-
     public void setVote(Integer vote){
         this.vote = vote;
     }

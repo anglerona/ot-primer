@@ -22,5 +22,13 @@ public class UserModel {
         this.user_name = user_name;
     }
 
+    public String getUserName(){return this.user_name;}
+    public Integer getId(){
+        return this.id;
+    }
 
+    public void setId(Integer id){
+        this.id = id;
+    }
+    public void setUserName(String user_name){this.user_name = user_name;}
 }
