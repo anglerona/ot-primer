@@ -16,7 +16,7 @@ npm run dev
 
 1. Ensure you have PgAdmin and Postgres installed. 
 
-2. Update your environment variables using the reg file.
+2. Update your environment variables using the reg file. Replace the '0000' fields with your PgAdmin password.
 
 3. Create a table ot_admin
 
