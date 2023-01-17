@@ -1,13 +1,13 @@
 import Link from "next/link";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Movie from "../components/Movie";
 
 interface MovieProperties {
   title: String;
   id: number;
   poster_path: String;
 }
-const MOVIEPATH = "https://image.tmdb.org/t/p/original/";
 
 export default function Home() {
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
@@ -25,11 +25,15 @@ export default function Home() {
     };
     sendGetRequest();
   }, []);
+
   const listItems = movieList.map((movie) => (
-    <div key={movie.id} id="single-movie-container">
-      <a>{movie.title}</a>
-      <img alt="Movie Poster" src={MOVIEPATH + movie.poster_path}></img>
-    </div>
+    <>
+      <Movie
+        key={movie.id}
+        movieTitle={movie.title}
+        movieImg={movie.poster_path}
+      ></Movie>
+    </>
   ));
 
   return (
@@ -39,6 +43,9 @@ export default function Home() {
           <input type="submit" value="Logout" />
         </Link>
       </div>
+      <h3 style={{ textAlign: "center", paddingBottom: "20px" }}>
+        Top 5 Movies within the last 24 Hours
+      </h3>
       <div id="movie-container">{listItems}</div>
     </>
   );
