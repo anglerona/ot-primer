@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import React from "react";
+export const UserContext = React.createContext("");
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -9,8 +11,10 @@ export default function Home() {
     setUsername(e.target.value);
   };
   const submitUser = async (e) => {
+    // e.preventDefault();
     const resp = await axios.post("http://localhost:3000/", { username });
     resp.data.json;
+    <UserContext.Provider value={username} />;
   };
 
   return (

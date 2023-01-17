@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Comment from "../components/Comment";
+import { UserContext } from ".";
 
 interface MovieProperties {
   title: String;
@@ -40,6 +41,7 @@ export default function Home() {
   return (
     <>
       <div>
+        <UserContext.Consumer></UserContext.Consumer>
         <Link href="/">
           <input type="submit" value="Logout" />
         </Link>
