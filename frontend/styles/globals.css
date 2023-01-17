@@ -129,3 +129,20 @@ input {
   font: 0.75em/1em Arial, Helvetica, sans-serif;
   padding: 5px;
 }
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: "20px";
+}
+
+.user-name {
+  float: left;
+}
+
+.log-out {
+  float: right;
+  margin: 10px;
+}

@@ -5,6 +5,8 @@ import Movie from "../components/Movie";
 import Comment from "../components/Comment";
 import AddComment from "../components/AddComment";
 
+import { useSearchParams } from "next/navigation";
+
 interface MovieProperties {
   title: String;
   id: number;
@@ -12,6 +14,8 @@ interface MovieProperties {
 }
 
 export default function Home() {
+  const userName = useSearchParams().get("username");
+
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
 
   useEffect(() => {
@@ -40,12 +44,22 @@ export default function Home() {
 
   return (
     <>
-      <div>
-        <Link href="/">
-          <input type="submit" value="Logout" />
-        </Link>
-      </div>
-      <h3 style={{ textAlign: "center", paddingBottom: "20px" }}>
+      <nav>
+        <div className="user-name">{userName}</div>
+        <div className="log-out">
+          <Link href="/">
+            <input type="submit" value="Logout" />
+          </Link>
+        </div>
+      </nav>
+
+      <h3
+        style={{
+          textAlign: "center",
+          paddingBottom: "20px",
+          paddingTop: "40px",
+        }}
+      >
         Top 5 Movies within the last 24 Hours
       </h3>
       <div id="movie-container">{listItems}</div>
