@@ -34,7 +34,12 @@ export default function Home() {
 
   return (
     <>
-      <ul>{listItems}</ul>
+      <div>
+        <Link href="/">
+          <input type="submit" value="Logout" />
+        </Link>
+      </div>
+      <div id="movie-container">{listItems}</div>
     </>
   );
 }
