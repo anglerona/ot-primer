@@ -5,6 +5,13 @@
   margin-top: 10%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#column {
+  flex: 1;
+  text-align: center;
 }
 
 #movie-container {

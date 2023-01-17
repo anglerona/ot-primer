@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <>
       <form id="login-container">
-        <label>
-          Username:
-          <input type="text" name="name" />
+        <div id="column">Welcome</div>
+        <label style={{ marginRight: "70px" }} id="column">
+          Username: <input type="text" name="name"></input>
         </label>
-        <div>
+        <div id="column">
           <Link href="/main">
             <input type="submit" value="Login / Sign Up" />
           </Link>
