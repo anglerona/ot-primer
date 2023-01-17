@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Comment from "../components/Comment";
+import AddComment from "../components/AddComment";
 
 interface MovieProperties {
   title: String;
@@ -49,6 +50,7 @@ export default function Home() {
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
+        <AddComment></AddComment>
         <Comment></Comment>
       </div>
     </>
