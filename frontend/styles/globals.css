@@ -16,6 +16,12 @@
   flex-wrap: wrap;
 }
 
+#single-movie-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
