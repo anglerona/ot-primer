@@ -17,5 +17,28 @@ public class MovieModel {
     //foreign key
     private Integer review_id;
 
+    public MovieModel(){}
+
+    MovieModel(Integer review_id){
+        this.review_id = review_id;
+    }
+
+
+
+    public Integer getReviewID(){
+        return this.review_id;
+    }
+    public Integer getId(){
+        return this.id;
+    }
+
+    public void setId(Integer id){
+        this.id = id;
+    }
+    public void setReviewID(Integer review_id){
+        this.review_id= review_id;
+    }
+
+
 
 }

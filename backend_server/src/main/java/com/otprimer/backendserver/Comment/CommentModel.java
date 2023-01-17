@@ -26,4 +26,32 @@ public class CommentModel {
         this.review_id = review_id;
     }
 
+    public Integer getUserID(){
+        return this.user_id;
+    }
+    public Integer getReviewID(){
+        return this.review_id;
+    }
+    public String getComment(){
+        return this.comment;
+    }
+    public Integer getId(){
+        return this.id;
+    }
+
+    public void setId(Integer id){
+        this.id = id;
+    }
+    public void setUserID(Integer user_id){
+        this.user_id = user_id;
+    }
+    public void setReviewID(Integer review_id){
+        this.review_id = review_id;
+    }
+    public void setComment(String comment){
+        this.comment = comment;
+    }
+
+
+
 }
