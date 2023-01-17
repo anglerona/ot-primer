@@ -1,9 +1,27 @@
-export default function AddComment(props) {
-  const { movies } = props;
+import { useState } from "react";
 
-  const listMovies = movies.map((movie) => {
-    <option value={movie.title}>{movie.title}</option>;
-  });
+interface Movies {
+  movies: MovieProperties[];
+}
+
+interface MovieProperties {
+  title: String;
+  id: number;
+  poster_path: String;
+}
+
+export default function AddComment({ movies }: Movies) {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
+  const listMovies = movies.map((movie) => (
+    <>
+      <h5>{movie.title}</h5>
+    </>
+  ));
 
   return (
     <>
@@ -12,9 +30,8 @@ export default function AddComment(props) {
           <input type="text" name="name" style={{ width: "100%" }}></input>
         </label>
         <div id="add-comment-forms" style={{ justifyContent: "center" }}>
-          <select name="movies" id="movie-select">
-            {listMovies}
-          </select>
+          <button onClick={handleOpen}>Dropdown</button>
+          {open ? listMovies : null}
           <button>Submit Comment</button>
         </div>
       </div>
