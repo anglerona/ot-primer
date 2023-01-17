@@ -13,33 +13,33 @@ public class ReviewInfo {
     @GeneratedValue
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
-    private String userID;
-    private Long movieID;
-    private String comment;
-    private Integer vote;
+    private Integer user_id;
+    private Integer movie_id;
+    private Integer comment_id;
+    private Integer vote_id;
 
 
 
     public ReviewInfo(){}
 
-    ReviewInfo(String userID, Long movieID, String comment, Integer vote){
-        this.userID = userID;
-        this.movieID = movieID;
-        this.comment = comment;
-        this.vote = vote;
+    ReviewInfo(Integer user_id, Integer movie_id, Integer comment_id, Integer vote_id){
+        this.user_id = user_id;
+        this.movie_id = movie_id;
+        this.comment_id = comment_id;
+        this.vote_id = vote_id;
     }
 
-    public String getUserID(){
-        return this.userID;
+    public Integer getUserID(){
+        return this.user_id;
     }
-    public Long getMovieID(){
-        return this.movieID;
+    public Integer getMovieID(){
+        return this.movie_id;
     }
-    public String getComment(){
-        return this.comment;
+    public Integer getCommentID(){
+        return this.comment_id;
     }
-    public Integer getVote(){
-        return this.vote;
+    public Integer getVoteID(){
+        return this.vote_id;
     }
     public Integer getId(){
         return this.id;
@@ -48,19 +48,17 @@ public class ReviewInfo {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setUserID(String userID){
-        this.userID = userID;
+    public void setUserID(Integer userID){
+        this.user_id = user_id;
     }
-    public void setMovieID(Long movieID){
-        this.movieID = movieID;
-
+    public void setMovieID(Integer movieID){
+        this.movie_id = movie_id;
     }
-    public void setComment(String comment){
-        this.comment = comment;
-
+    public void setComment(String commentID) {
+        this.comment_id = comment_id;
     }
-    public void setVote(Integer vote){
-        this.vote = vote;
+    public void setVote(Integer voteID){
+        this.vote_id = vote_id;
     }
 
 
