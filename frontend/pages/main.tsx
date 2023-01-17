@@ -50,7 +50,7 @@ export default function Home() {
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
-        <AddComment></AddComment>
+        <AddComment movies={movieList}></AddComment>
         <Comment></Comment>
       </div>
     </>

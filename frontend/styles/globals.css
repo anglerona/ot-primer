@@ -23,6 +23,17 @@
   flex-wrap: wrap;
 }
 
+#add-comment-container {
+  width: 50%;
+  background-color: #d3d3d3;
+  margin-bottom: 20px;
+}
+
+#add-comment-forms {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #comment-container {
   display: flex;
   flex-direction: column;
