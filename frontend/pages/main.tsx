@@ -26,15 +26,20 @@ export default function Home() {
     sendGetRequest();
   }, []);
   const listItems = movieList.map((movie) => (
-    <div key={movie.id}>
-      <h1>{movie.title}</h1>
+    <div key={movie.id} id="single-movie-container">
+      <a>{movie.title}</a>
       <img alt="Movie Poster" src={MOVIEPATH + movie.poster_path}></img>
     </div>
   ));
 
   return (
     <>
-      <ul>{listItems}</ul>
+      <div>
+        <Link href="/">
+          <input type="submit" value="Logout" />
+        </Link>
+      </div>
+      <div id="movie-container">{listItems}</div>
     </>
   );
 }
