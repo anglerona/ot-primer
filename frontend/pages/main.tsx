@@ -43,6 +43,9 @@ export default function Home() {
           <input type="submit" value="Logout" />
         </Link>
       </div>
+      <h3 style={{ textAlign: "center", paddingBottom: "20px" }}>
+        Top 5 Movies within the last 24 Hours
+      </h3>
       <div id="movie-container">{listItems}</div>
     </>
   );

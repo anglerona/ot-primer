@@ -28,13 +28,13 @@ export default function Home() {
           ></input>
         </label>
         <div id="column">
-          {/* <Link href="/main"> */}
-          <input
-            type="submit"
-            value="Login / Sign Up"
-            onClick={(e) => submitUser(e)}
-          />
-          {/* </Link> */}
+          <Link href="/main">
+            <input
+              type="submit"
+              value="Login / Sign Up"
+              onClick={(e) => submitUser(e)}
+            />
+          </Link>
         </div>
       </form>
     </>
