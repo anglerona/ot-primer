@@ -99,3 +99,8 @@ img {
   width: 175px;
   height: 262.5px;
 }
+
+input {
+  font: 0.75em/1em Arial, Helvetica, sans-serif;
+  padding: 5px;
+}
