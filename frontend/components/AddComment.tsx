@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -10,18 +9,12 @@ interface Movies {
 }
 
 export default function AddComment({ movies }: Movies) {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open);
-  };
-
   return (
     <Box
       sx={{
         width: 800,
         height: 200,
-        backgroundColor: "#cfd8dc",
+        backgroundColor: "#d9d9d9 ",
       }}
     >
       <Grid
@@ -29,12 +22,12 @@ export default function AddComment({ movies }: Movies) {
         sx={{ height: "100%" }}
         alignItems="center"
         justifyContent="center"
-        spacing={0}
+        spacing={2}
       >
         <Grid item xs={12}>
           <Box display="flex" justifyContent="center" alignItems="center">
             <TextField
-              sx={{ width: "75%" }}
+              sx={{ width: "75%", backgroundColor: "white" }}
               size="medium"
               id="outlined-basic"
               label="Comment"
@@ -47,14 +40,24 @@ export default function AddComment({ movies }: Movies) {
             disablePortal
             id="combo-box-demo"
             options={movies}
-            sx={{ width: 200 }}
+            sx={{ width: "100%", backgroundColor: "white" }}
             renderInput={(params) => (
               <TextField {...params} label="Select Movie" />
             )}
           />
         </Grid>
         <Grid item xs={4}>
-          <Button variant="outlined">Submit Comment</Button>
+          <Button
+            sx={{
+              color: "black",
+              borderColor: "gray",
+              backgroundColor: "white",
+              width: "80%",
+            }}
+            variant="outlined"
+          >
+            Submit Comment
+          </Button>
         </Grid>
       </Grid>
     </Box>
