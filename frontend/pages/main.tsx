@@ -114,7 +114,7 @@ export default function Home() {
         ></AddComment>
         <a>All Comments</a>
         <br></br>
-        <div id="comments-container">{listComments}</div>
+        <div>{listComments}</div>
         <br></br>
       </div>
     </>

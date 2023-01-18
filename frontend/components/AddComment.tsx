@@ -9,8 +9,9 @@ export default function AddComment({ movies }: Movies) {
     <Box
       sx={{
         width: 800,
-        height: 200,
         backgroundColor: "#d9d9d9 ",
+        paddingTop: 2,
+        paddingBottom: 2,
       }}
     >
       <Grid
@@ -23,7 +24,7 @@ export default function AddComment({ movies }: Movies) {
         <Grid item xs={12}>
           <Box display="flex" justifyContent="center" alignItems="center">
             <TextField
-              sx={{ width: "75%", backgroundColor: "white" }}
+              sx={{ width: "85%", backgroundColor: "white" }}
               size="medium"
               id="outlined-basic"
               label="Comment"
