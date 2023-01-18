@@ -23,26 +23,31 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+<<<<<<< HEAD
         <item name="BRANCH:User" type="e8cecc67:BranchNodeDescriptor" />
+=======
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+>>>>>>> main
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserController.java" afterDir="false" />
+=======
+    <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,36 +59,31 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2KEtfQ0qJ8vXUNJLJgEVlmT9pkE" />
+  <component name="ProjectId" id="2KVq7uRqULpEFPQ9KpNqv50s1LN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com\otprimer\backendserver" />
-      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com.otprimer.backendserver" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="backend_server" />
-      <recent name="com.backend" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="BackendServerApplication1" type="Application" factoryName="Application" temporary="true">
+    <configuration name="BackendServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.otprimer.backendserver.BackendServerApplication" />
       <module name="backend_server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.backend_server.*" />
+          <option name="PATTERN" value="com.otprimer.backendserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,76 +93,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BackendServerApplication1" />
+        <item itemvalue="Application.BackendServerApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="" />
-      <created>1673551673625</created>
+      <changelist id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="" />
+      <created>1674069934868</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673551673625</updated>
+      <updated>1674069934868</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added initialization for USER">
-      <created>1673625823200</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1673625823200</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Changed spring boot version for JAVA 11">
-      <created>1673626259819</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1673626259819</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added changes to make it run :) doesnt work yet">
-      <created>1673627171371</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1673627171371</updated>
-    </task>
-    <task id="LOCAL-00004" summary="application.properties needs to be changed to make the code run. Currently something wrong with the database.">
-      <created>1673628374091</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1673628374091</updated>
-    </task>
-    <task id="LOCAL-00005" summary="minor changes to backend code. Ready to add additional controls to backend API">
-      <created>1673636447023</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1673636447023</updated>
-    </task>
-    <task id="LOCAL-00006" summary=".">
-      <created>1673636639214</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1673636639214</updated>
-    </task>
-    <task id="LOCAL-00007" summary="readme changes">
-      <created>1673636786959</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1673636786959</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added Json reference annotations and basic comment controller">
-      <created>1674054229302</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1674054229302</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +119,11 @@
                   <entry key="branch">
                     <value>
                       <list>
+<<<<<<< HEAD
                         <option value="User" />
+=======
+                        <option value="main" />
+>>>>>>> main
                       </list>
                     </value>
                   </entry>
@@ -189,18 +136,39 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added initialization for USER" />
-    <MESSAGE value="Changed spring boot version for JAVA 11" />
-    <MESSAGE value="added changes to make it run :) doesnt work yet" />
-    <MESSAGE value="application.properties needs to be changed to make the code run. Currently something wrong with the database." />
-    <MESSAGE value="minor changes to backend code. Ready to add additional controls to backend API" />
-    <MESSAGE value="." />
-    <MESSAGE value="readme changes" />
-    <MESSAGE value="Added stuff" />
-    <MESSAGE value="added Json reference annotations and basic comment controler" />
-    <MESSAGE value="added Json reference annotations and basic comment controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Json reference annotations and basic comment controller" />
+  <component name="WindowStateProjectService">
+    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1674070977746">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070977746" />
+    <state x="2660" y="257" key="FileChooserDialogImpl" timestamp="1674070965109">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2660" y="257" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070965109" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1674071263933">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1674071263933">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1674071263933">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1674071263933">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
+    <state x="2360" y="90" key="SettingsEditor" timestamp="1674070186673">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2360" y="90" key="SettingsEditor/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070186673" />
+    <state x="2584" y="407" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1674070182929">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2584" y="407" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070182929" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="198" key="GridCell.Tab.0.bottom" timestamp="1674069343051">
