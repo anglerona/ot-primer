@@ -1,13 +1,11 @@
 import { useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+import Button from "@mui/material/Button";
 
 interface Movies {
-  movies: MovieProperties[];
-}
-
-interface MovieProperties {
-  title: String;
-  id: number;
-  poster_path: String;
+  movies: String[];
 }
 
 export default function AddComment({ movies }: Movies) {
@@ -17,24 +15,23 @@ export default function AddComment({ movies }: Movies) {
     setOpen(!open);
   };
 
-  const listMovies = movies.map((movie) => (
-    <>
-      <h5>{movie.title}</h5>
-    </>
-  ));
-
   return (
-    <>
-      <div id="add-comment-container">
-        <label style={{ marginRight: "70px" }} id="column">
-          <input type="text" name="name" style={{ width: "100%" }}></input>
-        </label>
-        <div id="add-comment-forms" style={{ justifyContent: "center" }}>
-          <button onClick={handleOpen}>Dropdown</button>
-          {open ? listMovies : null}
-          <button>Submit Comment</button>
-        </div>
-      </div>
-    </>
+    <Box
+      sx={{
+        width: 800,
+        height: 200,
+        backgroundColor: "#cfd8dc",
+      }}
+    >
+      <TextField id="outlined-basic" label="Comment" variant="outlined" />
+      <Autocomplete
+        disablePortal
+        id="combo-box-demo"
+        options={movies}
+        sx={{ width: 200 }}
+        renderInput={(params) => <TextField {...params} label="Select Movie" />}
+      />
+      <Button variant="outlined">Submit Comment</Button>
+    </Box>
   );
 }

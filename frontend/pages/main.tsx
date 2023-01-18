@@ -109,7 +109,9 @@ export default function Home() {
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
-        <AddComment movies={movieList}></AddComment>
+        <AddComment
+          movies={Array.from(movieList, (movie) => movie.title)}
+        ></AddComment>
         <div id="comments-container">{listComments}</div>
       </div>
     </>
