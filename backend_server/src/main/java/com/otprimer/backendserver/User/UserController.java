@@ -1,5 +1,7 @@
 package com.otprimer.backendserver.User;
 
+import com.otprimer.backendserver.Comment.Comment;
+import com.otprimer.backendserver.Comment.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -12,18 +14,18 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path="/user")
 public class UserController {
-    private final UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-    public UserController(final UserRepository userRepository){
-        this.userRepository = userRepository;
+
+
+
+    @GetMapping
+    public Iterable<User> findAllUsers(){
+        return userRepository.findAll();
     }
 
-    @GetMapping("/")
-    public Iterable<User> getAllUsers(){
-        return this.userRepository.findAll();
-    }
-
-    @PostMapping("/")
+    @PostMapping
     public User addUser(@RequestBody User user){
         User newUser = this.userRepository.save(user);
         return newUser;
