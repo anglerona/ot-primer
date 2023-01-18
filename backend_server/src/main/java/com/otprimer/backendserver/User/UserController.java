@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}/change/username")
-    public User changeUsername(@PathVariable("id") Integer id, @RequestBody User user){
+    public User changeUsername(@PathVariable("id") String id, @RequestBody User user){
         Optional<User> optionalUser = this.userRepository.findById(id);
         if(!optionalUser.isPresent()){
             return null;
@@ -45,7 +45,7 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
-    public User deleteUser(@PathVariable("id") Integer id){
+    public User deleteUser(@PathVariable("id") String id){
         Optional<User> optUser = this.userRepository.findById(id);
         if(!optUser.isPresent()){
             return null;
