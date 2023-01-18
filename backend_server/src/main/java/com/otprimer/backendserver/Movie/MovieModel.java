@@ -1,6 +1,7 @@
 package com.otprimer.backendserver.Movie;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.otprimer.backendserver.Review.ReviewInfo;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class MovieModel {
 
 
     @OneToMany(mappedBy = "movie")
+    @JsonBackReference
     private Set<ReviewInfo> review;
 
 
@@ -36,7 +38,7 @@ public class MovieModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setReviewID(Set<ReviewInfo> review){
+    public void setReview(Set<ReviewInfo> review){
         this.review= review;
     }
 

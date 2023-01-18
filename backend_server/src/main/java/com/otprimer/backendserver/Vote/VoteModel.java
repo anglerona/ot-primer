@@ -1,5 +1,6 @@
 package com.otprimer.backendserver.Vote;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.otprimer.backendserver.Review.ReviewInfo;
 import com.otprimer.backendserver.User.UserModel;
 
@@ -19,6 +20,7 @@ public class VoteModel {
 //    private UserModel user;
 
     @OneToOne(mappedBy = "vote")
+    @JsonBackReference
     private ReviewInfo review;
 
     public VoteModel(){}
@@ -40,6 +42,6 @@ public class VoteModel {
     }
 //    public void setUserID(UserModel user_id){this.user = user;}
     public void setLikeDislike(Integer like_dislike){this.like_dislike = like_dislike;}
-    public void setReviewID(ReviewInfo review){this.review = review;}
+    public void setReview(ReviewInfo review){this.review = review;}
 
 }

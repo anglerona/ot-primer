@@ -28,16 +28,9 @@ public class ReviewInfoController {
     }
 
     @PostMapping
-    public void saveReview(@Validated @RequestBody ReviewInfo reviewInfo){
-        System.out.println("hello");
+    public ReviewInfo saveReview(@Validated @RequestBody ReviewInfo reviewInfo){
         reviewInfo.getComment().setReview(reviewInfo);
-        System.out.println("bye");
-        System.out.println(reviewInfo.getUserID());
-        System.out.println(reviewInfo.getMovieID());
-        System.out.println(reviewInfo.getVoteID());
-        reviewInfoRepository.save(reviewInfo);
+        reviewInfo.getVote().setReview((reviewInfo));
+        return reviewInfoRepository.save(reviewInfo);
     }
-
-
-
 }
