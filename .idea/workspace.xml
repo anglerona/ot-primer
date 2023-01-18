@@ -30,11 +30,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ERDiagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/ERDiagram.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +48,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -77,13 +71,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com\otprimer\backendserver" />
-      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com.otprimer.backendserver" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="backend_server" />
       <recent name="com.backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com\otprimer\backendserver" />
+      <recent name="C:\Users\aryanp\Documents\ot-primer\backend_server\src\main\java\com.otprimer.backendserver" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,6 +183,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added initialization for USER" />
@@ -200,5 +195,80 @@
     <MESSAGE value="readme changes" />
     <MESSAGE value="Added stuff" />
     <option name="LAST_COMMIT_MESSAGE" value="Added stuff" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2506" y="194" key="#Inspections" timestamp="1673624152109">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2506" y="194" key="#Inspections/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673624152109" />
+    <state x="331" y="135" width="874" height="589" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1673880437752">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626802251" />
+    <state x="331" y="135" width="874" height="589" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1673880437752" />
+    <state x="2596" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1673626632199">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2596" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626632199" />
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1673828400110">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1673828400110" />
+    <state x="2437" y="440" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1673626340600">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2437" y="440" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626340600" />
+    <state x="2638" y="385" width="484" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1673626395773">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2638" y="385" width="484" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626395773" />
+    <state x="2673" y="397" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1673626342154">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2673" y="397" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626342154" />
+    <state x="454" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1673893007417">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="454" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1673893007417" />
+    <state x="2747" y="266" key="EnvironmentVariablesDialog" timestamp="1673621166949">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2747" y="266" key="EnvironmentVariablesDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673621166949" />
+    <state x="2660" y="271" key="FileChooserDialogImpl" timestamp="1673620680848">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2660" y="271" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673620680848" />
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1673893162634">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1673893162634">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1673893162634">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1673893162634">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673641175534" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1673893162634" />
+    <state x="2410" y="171" key="Maven.ArtifactSearchDialog" timestamp="1673624414359">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2410" y="171" key="Maven.ArtifactSearchDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673624414359" />
+    <state x="2360" y="90" key="SettingsEditor" timestamp="1673626125631">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2360" y="90" key="SettingsEditor/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673626125631" />
+    <state x="2472" y="249" key="Vcs.Push.Dialog.v2" timestamp="1673636792538">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state x="2472" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1673636792538" />
   </component>
 </project>

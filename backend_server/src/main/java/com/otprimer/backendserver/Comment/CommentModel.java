@@ -1,8 +1,8 @@
 package com.otprimer.backendserver.Comment;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.otprimer.backendserver.Review.ReviewInfo;
+import com.otprimer.backendserver.User.UserModel;
 
 import javax.persistence.*;
 
@@ -11,50 +11,51 @@ import javax.persistence.*;
 @Table(name="CommentModel", schema = "public" )
 public class CommentModel {
     private @Id
-    String id;
+    @GeneratedValue
+    Integer id;
 
-    private String body;
-    private String user_id;
+    private String comment;
+
+//    @OneToOne0(mappedBy = "comment")
+//    private UserModel user;
+
     @OneToOne(mappedBy = "comment")
-    @JsonBackReference
     private ReviewInfo review;
-
 
     public CommentModel(){}
 
-    CommentModel(String id, String body, String user_id, ReviewInfo review){
-        this.id = id;
-        this.body = body;
-        this.user_id = user_id;
+    CommentModel(String comment, ReviewInfo review){
+        this.comment = comment;
+//        this.user = user;
         this.review = review;
     }
 
-
-    public String getUserID(){
-        return this.user_id;
-    }
-    public ReviewInfo getReview(){
+//    public UserModel getUserID(){
+//        return this.user;
+//    }
+    public ReviewInfo getReviewID(){
         return this.review;
     }
-    public String getBody(){
-        return this.body;
+    public String getComment(){
+        return this.comment;
     }
-    public String getID(){
+    public Integer getId(){
         return this.id;
     }
 
-    public void setUserID(String user_id){
-        this.user_id = user_id;
-    }
-    public void setReview(ReviewInfo review){
-        this.review = review;
-    }
-    public void setBody(String body){
-        this.body = body;
-    }
-    public void setID(String id) {
+    public void setId(Integer id){
         this.id = id;
     }
+//    public void setUserID(UserModel user){
+//        this.user = user;
+//    }
+    public void setReviewID(ReviewInfo review){
+        this.review = review;
+    }
+    public void setComment(String comment){
+        this.comment = comment;
+    }
+
 
 
 }

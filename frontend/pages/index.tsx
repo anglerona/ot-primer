@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import React from "react";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -9,7 +10,7 @@ export default function Home() {
     setUsername(e.target.value);
   };
   const submitUser = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const resp = await axios.post("http://localhost:3000/", { username });
     resp.data.json;
   };
@@ -28,7 +29,7 @@ export default function Home() {
           ></input>
         </label>
         <div id="column">
-          <Link href="/main">
+          <Link href={{ pathname: "/main", query: { username: username } }}>
             <input
               type="submit"
               value="Login / Sign Up"
