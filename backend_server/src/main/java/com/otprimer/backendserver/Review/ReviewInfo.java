@@ -18,12 +18,12 @@ public class ReviewInfo {
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @JsonBackReference(value="user")
     private UserModel user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "movie_id", referencedColumnName = "id")
     @JsonBackReference(value="movie")
     private MovieModel movie;

@@ -56,7 +56,7 @@ public class CommentModel {
     public void setReview(ReviewInfo review){
         this.review = review;
     }
-    public void setComment(String body){
+    public void setBody(String body){
         this.body = body;
     }
 

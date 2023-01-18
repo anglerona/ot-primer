@@ -18,7 +18,7 @@ public class MovieModel {
 
 
 
-    @OneToMany(mappedBy = "movie")
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     @JsonManagedReference(value="movie")
     private Set<ReviewInfo> review;
 
