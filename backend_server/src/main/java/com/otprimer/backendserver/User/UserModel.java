@@ -14,12 +14,11 @@ import java.util.Set;
 @Table(name="UserModel", schema = "public" )
 public class UserModel {
     private @Id
-    @GeneratedValue
-    Integer id;
+    String id;
 
     private String user_name;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference(value="user")
     private Set<ReviewInfo> review;
 
@@ -33,12 +32,12 @@ public class UserModel {
     }
 
     public String getUserName(){return this.user_name;}
-    public Integer getId(){
+    public String getId(){
         return this.id;
     }
     public Set<ReviewInfo> getReview(){return this.review;}
 
-    public void setId(Integer id){
+    public void setId(String id){
         this.id = id;
     }
     public void setUserName(String user_name){this.user_name = user_name;}
