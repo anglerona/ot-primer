@@ -17,12 +17,12 @@ public class Review {
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @JsonBackReference(value="user")
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "movie_id", referencedColumnName = "id")
     @JsonBackReference(value="movie")
     private Movie movie;
@@ -37,6 +37,8 @@ public class Review {
     @JsonManagedReference
     private Vote vote;
 
+    private String username;
+    private String movieName;
 
     public Review(){}
 
@@ -61,6 +63,22 @@ public class Review {
     }
     public Integer getId(){
         return this.id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setId(Integer id){

@@ -17,8 +17,6 @@ public class ReviewController {
         this.reviewRepository = reviewRepository;
     }
 
-
-
     @GetMapping
     public @ResponseBody Iterable<Review> getReviews() {
         // This returns a JSON or XML with the users
@@ -28,10 +26,10 @@ public class ReviewController {
     @PostMapping
     public Review saveReview(@Validated @RequestBody Review review){
         review.getComment().setReview(review);
-        System.out.println("hello");
-        System.out.println(review.getComment().getBody());
-        System.out.println(review.getId());
-        System.out.println("bye");
+        review.setUsername(review.getUser().getId());
+        review.setMovieName(review.getMovie().getName());
         return reviewRepository.save(review);
     }
+
+
 }

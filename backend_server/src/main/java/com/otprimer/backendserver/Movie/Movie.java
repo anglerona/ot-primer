@@ -17,9 +17,11 @@ public class Movie {
 
 
 
-    @OneToMany(mappedBy = "movie")
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     @JsonManagedReference(value="movie")
     private Set<Review> review;
+
+    private String name;
 
 
     public Movie(){}
@@ -33,6 +35,14 @@ public class Movie {
     }
     public Integer getId(){
         return this.id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(Integer id){
