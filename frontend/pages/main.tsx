@@ -104,7 +104,7 @@ export default function Home() {
           paddingBottom: "20px",
         }}
       >
-        Top 5 Movies within the last 24 Hours
+        Top 5 Movies within the Last 24 Hours
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">

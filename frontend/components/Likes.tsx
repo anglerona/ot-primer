@@ -49,7 +49,7 @@ export default function Likes() {
 
   return (
     <div>
-      <div>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <button
           className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
           onClick={handleLikeClick}
