@@ -1,6 +1,7 @@
 package com.otprimer.backendserver.User;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.otprimer.backendserver.Comment.CommentModel;
 import com.otprimer.backendserver.Review.ReviewInfo;
 import com.otprimer.backendserver.Vote.VoteModel;
@@ -19,7 +20,7 @@ public class UserModel {
     private String user_name;
 
     @OneToMany(mappedBy = "user")
-    @JsonBackReference
+    @JsonManagedReference(value="user")
     private Set<ReviewInfo> review;
 
 

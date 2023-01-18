@@ -24,13 +24,16 @@ public class ReviewInfoController {
     @GetMapping
     public @ResponseBody Iterable<ReviewInfo> getReviewInfo() {
         // This returns a JSON or XML with the users
-        return this.reviewInfoRepository.findAll();
+        return reviewInfoRepository.findAll();
     }
 
     @PostMapping
     public ReviewInfo saveReview(@Validated @RequestBody ReviewInfo reviewInfo){
         reviewInfo.getComment().setReview(reviewInfo);
-        reviewInfo.getVote().setReview((reviewInfo));
+        System.out.println("hello");
+        System.out.println(reviewInfo.getComment().getBody());
+        System.out.println(reviewInfo.getId());
+        System.out.println("bye");
         return reviewInfoRepository.save(reviewInfo);
     }
 }

@@ -2,6 +2,7 @@ package com.otprimer.backendserver.Review;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.otprimer.backendserver.User.UserModel;
 import com.otprimer.backendserver.Movie.MovieModel;
@@ -13,18 +14,18 @@ import org.apache.catalina.User;
 @Table(name="ReviewInfo", schema = "public" )
 public class ReviewInfo {
     private @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    @JsonManagedReference
+    @JsonBackReference(value="user")
     private UserModel user;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "movie_id", referencedColumnName = "id")
-    @JsonManagedReference
+    @JsonBackReference(value="movie")
     private MovieModel movie;
 
     @OneToOne(cascade = CascadeType.ALL)
