@@ -1,17 +1,16 @@
 package com.otprimer.backendserver.Movie;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.otprimer.backendserver.Review.ReviewInfo;
+import com.otprimer.backendserver.Review.Review;
 
 import javax.persistence.*;
 import java.util.Set;
 
 
 @Entity
-@Table(name="MovieModel", schema = "public" )
-public class MovieModel {
+@Table(name="Movie", schema = "public" )
+public class Movie {
     private @Id
     @GeneratedValue
     Integer id;
@@ -20,18 +19,18 @@ public class MovieModel {
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     @JsonManagedReference(value="movie")
-    private Set<ReviewInfo> review;
+    private Set<Review> review;
 
     private String name;
 
 
-    public MovieModel(){}
+    public Movie(){}
 
-    MovieModel(Set<ReviewInfo> review){
+    Movie(Set<Review> review){
         this.review = review;
     }
 
-    public Set<ReviewInfo> getReview(){
+    public Set<Review> getReview(){
         return this.review;
     }
     public Integer getId(){
@@ -49,7 +48,7 @@ public class MovieModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setReview(Set<ReviewInfo> review){
+    public void setReview(Set<Review> review){
         this.review= review;
     }
 
