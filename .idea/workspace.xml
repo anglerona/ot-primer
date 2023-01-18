@@ -23,22 +23,12 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:aryan-updateCode" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" afterDir="false" />
-    </list>
+    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,6 +177,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added initialization for USER" />
