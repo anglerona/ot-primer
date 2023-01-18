@@ -112,8 +112,10 @@ export default function Home() {
         <AddComment
           movies={Array.from(movieList, (movie) => movie.title)}
         ></AddComment>
+        <a>All Comments</a>
         <br></br>
         <div id="comments-container">{listComments}</div>
+        <br></br>
       </div>
     </>
   );
