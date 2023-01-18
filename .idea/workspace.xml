@@ -28,12 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
+    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="added Json reference annotations and basic comment controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" afterDir="false" />
@@ -162,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673636786959</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added Json reference annotations and basic comment controller">
+      <created>1674054229302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674054229302</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +202,8 @@
     <MESSAGE value="." />
     <MESSAGE value="readme changes" />
     <MESSAGE value="Added stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added stuff" />
+    <MESSAGE value="added Json reference annotations and basic comment controler" />
+    <MESSAGE value="added Json reference annotations and basic comment controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Json reference annotations and basic comment controller" />
   </component>
 </project>

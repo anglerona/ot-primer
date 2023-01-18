@@ -2,8 +2,10 @@ package com.otprimer.backendserver.Comment;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.otprimer.backendserver.Review.ReviewInfo;
 import com.otprimer.backendserver.User.UserModel;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
@@ -12,7 +14,7 @@ import javax.persistence.*;
 @Table(name="CommentModel", schema = "public" )
 public class CommentModel {
     private @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
 
     private String body;
