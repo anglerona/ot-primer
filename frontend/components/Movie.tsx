@@ -1,5 +1,5 @@
 import Like from "../components/Likes";
-
+import { CardHeader, CardMedia, Card, CardContent } from "@mui/material";
 interface MovieProperties {
   movieTitle: String;
   movieImg: String;
@@ -8,13 +8,24 @@ interface MovieProperties {
 export default function Movie(props: MovieProperties) {
   const { movieTitle, movieImg } = props;
   return (
-    <div id="single-movie-container">
-      <a>{movieTitle}</a>
-      <img
-        alt="Movie Poster"
-        src={"https://image.tmdb.org/t/p/original/" + movieImg}
-      ></img>
-      <Like></Like>
-    </div>
+    <Card sx={{ width: 200 }}>
+      <div id="single-movie-container">
+        <CardHeader
+          titleTypographyProps={{
+            fontSize: 15,
+          }}
+          title={movieTitle}
+        />
+        <CardMedia
+          component="img"
+          height="194"
+          image={"https://image.tmdb.org/t/p/original/" + movieImg}
+          alt="Movie Poster"
+        />
+        <CardContent>
+          <Like></Like>
+        </CardContent>
+      </div>
+    </Card>
   );
 }

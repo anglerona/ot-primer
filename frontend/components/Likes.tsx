@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
 export default function Likes() {
   const [likeCount, setLikeCount] = useState(0);
@@ -53,7 +55,9 @@ export default function Likes() {
           className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
           onClick={handleLikeClick}
         >
-          <span>up </span>
+          <span>
+            <ThumbUpOffAltIcon />{" "}
+          </span>
           {likeCount}
         </button>
 
@@ -61,7 +65,10 @@ export default function Likes() {
           className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
           onClick={handleDisikeClick}
         >
-          <span>down </span> {dislikeCount}
+          <span>
+            <ThumbDownIcon />{" "}
+          </span>{" "}
+          {dislikeCount}
         </button>
       </div>
     </div>
