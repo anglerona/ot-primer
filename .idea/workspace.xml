@@ -23,12 +23,14 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:User" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes" />
+    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="readme changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +168,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="aryan-updateCode" />
+                        <option value="User" />
                       </list>
                     </value>
                   </entry>
@@ -189,5 +191,23 @@
     <MESSAGE value="readme changes" />
     <MESSAGE value="Added stuff" />
     <option name="LAST_COMMIT_MESSAGE" value="Added stuff" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="198" key="GridCell.Tab.0.bottom" timestamp="1674055275856">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="198" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674055275856" />
+    <state width="1877" height="198" key="GridCell.Tab.0.center" timestamp="1674055275856">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="198" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674055275856" />
+    <state width="1877" height="198" key="GridCell.Tab.0.left" timestamp="1674055275855">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="198" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674055275855" />
+    <state width="1877" height="198" key="GridCell.Tab.0.right" timestamp="1674055275856">
+      <screen x="1920" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="198" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674055275856" />
   </component>
 </project>
