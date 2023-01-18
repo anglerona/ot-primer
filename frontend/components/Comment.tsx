@@ -1,8 +1,19 @@
-export default function Comment() {
+import Movie from "./Movie";
+interface CommentProperties {
+  comment: String;
+  userID: String;
+  key: number;
+}
+
+export default function Comment(props: CommentProperties) {
+  const { comment, userID } = props;
   return (
     <div id="single-comment-container">
-      <p>Great Movie!</p>
-      <p>by user50021</p>
+      <div>
+        {comment}
+        {userID}
+      </div>
+      <div></div>
     </div>
   );
 }
