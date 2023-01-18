@@ -1,6 +1,4 @@
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import { userAgent } from "next/server";
+import { Box, Grid } from "@mui/material";
 
 interface CommentProperties {
   comment: String;
