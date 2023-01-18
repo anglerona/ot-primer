@@ -23,18 +23,16 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-
         <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,55 +123,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1674070977746">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state x="2334" y="171" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070977746" />
-    <state x="2660" y="257" key="FileChooserDialogImpl" timestamp="1674070965109">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state x="2660" y="257" key="FileChooserDialogImpl/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070965109" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1674071263933">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1674071263933">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1674071263933">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1674071263933">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674071263933" />
-    <state x="2360" y="90" key="SettingsEditor" timestamp="1674070186673">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state x="2360" y="90" key="SettingsEditor/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070186673" />
-    <state x="2584" y="407" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1674070182929">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state x="2584" y="407" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674070182929" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1877" height="198" key="GridCell.Tab.0.bottom" timestamp="1674069343051">
-      <screen x="1920" y="0" width="1920" height="1032" />
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1674077986252">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1877" height="198" key="GridCell.Tab.0.center" timestamp="1674069343051">
-      <screen x="1920" y="0" width="1920" height="1032" />
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1674077986252">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1877" height="198" key="GridCell.Tab.0.left" timestamp="1674069343051">
-      <screen x="1920" y="0" width="1920" height="1032" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1674077986252">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1877" height="198" key="GridCell.Tab.0.right" timestamp="1674069343051">
-      <screen x="1920" y="0" width="1920" height="1032" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1674077986252">
+      <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
   </component>
 </project>

@@ -27,7 +27,8 @@ public class ReviewController {
     public Review saveReview(@Validated @RequestBody Review review){
         review.getComment().setReview(review);
         review.setUsername(review.getUser().getId());
-        review.setMovieName(review.getMovie().getName());
+//        review.setMovieName(review.getMovie().getName());
+        //review.getVote().setReview(review);
         return reviewRepository.save(review);
     }
 
