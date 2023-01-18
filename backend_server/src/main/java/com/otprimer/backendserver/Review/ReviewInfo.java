@@ -1,6 +1,9 @@
 package com.otprimer.backendserver.Review;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.otprimer.backendserver.User.UserModel;
 import com.otprimer.backendserver.Movie.MovieModel;
 import com.otprimer.backendserver.Comment.CommentModel;
@@ -11,24 +14,28 @@ import org.apache.catalina.User;
 @Table(name="ReviewInfo", schema = "public" )
 public class ReviewInfo {
     private @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
     //ID , UserID, MovieID, Comment, Vote
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonBackReference(value="user")
     private UserModel user;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "movie_id", referencedColumnName = "id")
+    @JsonBackReference(value="movie")
     private MovieModel movie;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "comment_id", referencedColumnName = "id")
+    @JsonManagedReference
     private CommentModel comment;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "vote_id", referencedColumnName = "id")
+    @JsonManagedReference
     private VoteModel vote;
 
 
@@ -41,16 +48,16 @@ public class ReviewInfo {
         this.vote = vote;
     }
 
-    public UserModel getUserID(){
+    public UserModel getUser(){
         return this.user;
     }
-    public MovieModel getMovieID(){
+    public MovieModel getMovie(){
         return this.movie;
     }
-    public CommentModel getCommentID(){
+    public CommentModel getComment(){
         return this.comment;
     }
-    public VoteModel getVoteID(){
+    public VoteModel getVote(){
         return this.vote;
     }
     public Integer getId(){

@@ -142,9 +142,10 @@ nav {
 
 .user-name {
   float: left;
+  padding: 20px;
 }
 
 .log-out {
   float: right;
-  margin: 10px;
+  padding: 20px;
 }

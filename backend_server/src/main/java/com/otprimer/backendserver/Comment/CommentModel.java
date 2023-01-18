@@ -1,8 +1,11 @@
 package com.otprimer.backendserver.Comment;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.otprimer.backendserver.Review.ReviewInfo;
 import com.otprimer.backendserver.User.UserModel;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
@@ -11,21 +14,22 @@ import javax.persistence.*;
 @Table(name="CommentModel", schema = "public" )
 public class CommentModel {
     private @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
 
-    private String comment;
+    private String body;
 
 //    @OneToOne0(mappedBy = "comment")
 //    private UserModel user;
 
     @OneToOne(mappedBy = "comment")
+    @JsonBackReference
     private ReviewInfo review;
 
     public CommentModel(){}
 
-    CommentModel(String comment, ReviewInfo review){
-        this.comment = comment;
+    CommentModel(String body, ReviewInfo review){
+        this.body = body;
 //        this.user = user;
         this.review = review;
     }
@@ -33,11 +37,11 @@ public class CommentModel {
 //    public UserModel getUserID(){
 //        return this.user;
 //    }
-    public ReviewInfo getReviewID(){
+    public ReviewInfo getReview(){
         return this.review;
     }
-    public String getComment(){
-        return this.comment;
+    public String getBody(){
+        return this.body;
     }
     public Integer getId(){
         return this.id;
@@ -49,11 +53,11 @@ public class CommentModel {
 //    public void setUserID(UserModel user){
 //        this.user = user;
 //    }
-    public void setReviewID(ReviewInfo review){
+    public void setReview(ReviewInfo review){
         this.review = review;
     }
-    public void setComment(String comment){
-        this.comment = comment;
+    public void setComment(String body){
+        this.body = body;
     }
 
 
