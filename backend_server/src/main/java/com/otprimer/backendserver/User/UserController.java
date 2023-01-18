@@ -17,19 +17,18 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
-
-
     @GetMapping
     public Iterable<User> findAllUsers(){
         return userRepository.findAll();
     }
 
     @PostMapping
-    public User addUser(@RequestBody User user){
-        User newUser = this.userRepository.save(user);
-        return newUser;
+    public User saveUser(@Validated @RequestBody User user) {
+        System.out.println(user);
+        return userRepository.save(user);
     }
+
+
 
     @PutMapping("/{id}/change/username")
     public User changeUsername(@PathVariable("id") String id, @RequestBody User user){
