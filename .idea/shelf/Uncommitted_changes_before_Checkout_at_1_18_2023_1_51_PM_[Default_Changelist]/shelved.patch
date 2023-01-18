@@ -1,0 +1,168 @@
+Index: backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.otprimer.backendserver.Review;\r\n\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\n\r\nimport org.springframework.validation.annotation.Validated;\r\nimport org.springframework.web.bind.annotation.*;\r\n\r\n\r\n@RestController // This allows for automatic response body\r\n@RequestMapping(path=\"/review\")\r\npublic class ReviewInfoController {\r\n    @Autowired\r\n\r\n    private final ReviewInfoRepository reviewInfoRepository;\r\n\r\n    public ReviewInfoController(final ReviewInfoRepository reviewInfoRepository){\r\n        this.reviewInfoRepository = reviewInfoRepository;\r\n    }\r\n\r\n\r\n\r\n    @GetMapping\r\n    public @ResponseBody Iterable<ReviewInfo> getReviewInfo() {\r\n        // This returns a JSON or XML with the users\r\n        return reviewInfoRepository.findAll();\r\n    }\r\n\r\n    @PostMapping\r\n    public ReviewInfo saveReview(@Validated @RequestBody ReviewInfo reviewInfo){\r\n        reviewInfo.getComment().setReview(reviewInfo);\r\n        return reviewInfoRepository.save(reviewInfo);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java b/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java
+--- a/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java	(revision cd4de889dbf366830ca73d8a4a47429194aa2934)
++++ b/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java	(date 1674067845554)
+@@ -28,6 +28,8 @@
+     @PostMapping
+     public ReviewInfo saveReview(@Validated @RequestBody ReviewInfo reviewInfo){
+         reviewInfo.getComment().setReview(reviewInfo);
++        reviewInfo.setUsername(reviewInfo.getUser().getId());
++        reviewInfo.setMovieName(reviewInfo.getMovie().getName());
+         return reviewInfoRepository.save(reviewInfo);
+     }
+ }
+\ No newline at end of file
+Index: backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.otprimer.backendserver.Movie;\r\n\r\n\r\nimport com.fasterxml.jackson.annotation.JsonBackReference;\r\nimport com.fasterxml.jackson.annotation.JsonManagedReference;\r\nimport com.otprimer.backendserver.Review.ReviewInfo;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.Set;\r\n\r\n\r\n@Entity\r\n@Table(name=\"MovieModel\", schema = \"public\" )\r\npublic class MovieModel {\r\n    private @Id\r\n    @GeneratedValue\r\n    Integer id;\r\n\r\n\r\n\r\n    @OneToMany(mappedBy = \"movie\", cascade = CascadeType.ALL)\r\n    @JsonManagedReference(value=\"movie\")\r\n    private Set<ReviewInfo> review;\r\n\r\n\r\n    public MovieModel(){}\r\n\r\n    MovieModel(Set<ReviewInfo> review){\r\n        this.review = review;\r\n    }\r\n\r\n    public Set<ReviewInfo> getReview(){\r\n        return this.review;\r\n    }\r\n    public Integer getId(){\r\n        return this.id;\r\n    }\r\n\r\n    public void setId(Integer id){\r\n        this.id = id;\r\n    }\r\n    public void setReview(Set<ReviewInfo> review){\r\n        this.review= review;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java b/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java
+--- a/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java	(revision cd4de889dbf366830ca73d8a4a47429194aa2934)
++++ b/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java	(date 1674067845545)
+@@ -22,6 +22,8 @@
+     @JsonManagedReference(value="movie")
+     private Set<ReviewInfo> review;
+ 
++    private String name;
++
+ 
+     public MovieModel(){}
+ 
+@@ -36,6 +38,14 @@
+         return this.id;
+     }
+ 
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
+     public void setId(Integer id){
+         this.id = id;
+     }
+Index: backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.otprimer.backendserver.Review;\r\n\r\nimport javax.persistence.*;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonBackReference;\r\nimport com.fasterxml.jackson.annotation.JsonManagedReference;\r\nimport com.otprimer.backendserver.User.UserModel;\r\nimport com.otprimer.backendserver.Movie.MovieModel;\r\nimport com.otprimer.backendserver.Comment.CommentModel;\r\nimport com.otprimer.backendserver.Vote.VoteModel;\r\nimport org.apache.catalina.User;\r\n\r\n@Entity\r\n@Table(name=\"ReviewInfo\", schema = \"public\" )\r\npublic class ReviewInfo {\r\n    private @Id\r\n    @GeneratedValue(strategy = GenerationType.AUTO)\r\n    Integer id;\r\n    //ID , UserID, MovieID, Comment, Vote\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"user_id\", referencedColumnName = \"id\")\r\n    @JsonBackReference(value=\"user\")\r\n    private UserModel user;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"movie_id\", referencedColumnName = \"id\")\r\n    @JsonBackReference(value=\"movie\")\r\n    private MovieModel movie;\r\n\r\n    @OneToOne(cascade = CascadeType.ALL)\r\n    @JoinColumn(name = \"comment_id\", referencedColumnName = \"id\")\r\n    @JsonManagedReference\r\n    private CommentModel comment;\r\n\r\n    @OneToOne(cascade = CascadeType.ALL)\r\n    @JoinColumn(name = \"vote_id\", referencedColumnName = \"id\")\r\n    @JsonManagedReference\r\n    private VoteModel vote;\r\n\r\n\r\n    public ReviewInfo(){}\r\n\r\n    ReviewInfo(UserModel user, MovieModel movie, CommentModel comment, VoteModel vote){\r\n        this.user= user;\r\n        this.movie = movie;\r\n        this.comment = comment;\r\n        this.vote = vote;\r\n    }\r\n\r\n    public UserModel getUser(){\r\n        return this.user;\r\n    }\r\n    public MovieModel getMovie(){\r\n        return this.movie;\r\n    }\r\n    public CommentModel getComment(){\r\n        return this.comment;\r\n    }\r\n    public VoteModel getVote(){\r\n        return this.vote;\r\n    }\r\n    public Integer getId(){\r\n        return this.id;\r\n    }\r\n\r\n    public void setId(Integer id){\r\n        this.id = id;\r\n    }\r\n    public void setUserID(UserModel user){\r\n        this.user = user;\r\n    }\r\n    public void setMovieID(MovieModel movie){\r\n        this.movie = movie;\r\n    }\r\n    public void setComment(CommentModel comment) {\r\n        this.comment = comment;\r\n    }\r\n    public void setVote(VoteModel vote){\r\n        this.vote = vote;\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java b/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java
+--- a/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java	(revision cd4de889dbf366830ca73d8a4a47429194aa2934)
++++ b/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java	(date 1674067845538)
+@@ -38,6 +38,8 @@
+     @JsonManagedReference
+     private VoteModel vote;
+ 
++    private String username;
++    private String movieName;
+ 
+     public ReviewInfo(){}
+ 
+@@ -64,6 +66,22 @@
+         return this.id;
+     }
+ 
++    public String getUsername() {
++        return username;
++    }
++
++    public String getMovieName() {
++        return movieName;
++    }
++
++    public void setMovieName(String movieName) {
++        this.movieName = movieName;
++    }
++
++    public void setUsername(String username) {
++        this.username = username;
++    }
++
+     public void setId(Integer id){
+         this.id = id;
+     }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:aryan-updateCode\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f8a02908-88a6-470e-9a0e-58e58c4db3f4\" name=\"Default Changelist\" comment=\"added Json reference annotations and basic comment controller\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2.4\\plugins\\maven\\lib\\maven3\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2KEtfQ0qJ8vXUNJLJgEVlmT9pkE\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\aryanp\\Documents\\ot-primer\\backend_server\\src\\main\\java\\com\\otprimer\\backendserver\" />\r\n      <recent name=\"C:\\Users\\aryanp\\Documents\\ot-primer\\backend_server\\src\\main\\java\\com.otprimer.backendserver\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"backend_server\" />\r\n      <recent name=\"com.backend\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"BackendServerApplication1\" type=\"Application\" factoryName=\"Application\" temporary=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.otprimer.backendserver.BackendServerApplication\" />\r\n      <module name=\"backend_server\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.backend_server.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.BackendServerApplication1\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f8a02908-88a6-470e-9a0e-58e58c4db3f4\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1673551673625</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1673551673625</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added initialization for USER\">\r\n      <created>1673625823200</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673625823200</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Changed spring boot version for JAVA 11\">\r\n      <created>1673626259819</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673626259819</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"added changes to make it run :) doesnt work yet\">\r\n      <created>1673627171371</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673627171371</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"application.properties needs to be changed to make the code run. Currently something wrong with the database.\">\r\n      <created>1673628374091</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673628374091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"minor changes to backend code. Ready to add additional controls to backend API\">\r\n      <created>1673636447023</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673636447023</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\".\">\r\n      <created>1673636639214</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673636639214</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"readme changes\">\r\n      <created>1673636786959</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673636786959</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"added Json reference annotations and basic comment controller\">\r\n      <created>1674054229302</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1674054229302</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"aryan-updateCode\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added initialization for USER\" />\r\n    <MESSAGE value=\"Changed spring boot version for JAVA 11\" />\r\n    <MESSAGE value=\"added changes to make it run :) doesnt work yet\" />\r\n    <MESSAGE value=\"application.properties needs to be changed to make the code run. Currently something wrong with the database.\" />\r\n    <MESSAGE value=\"minor changes to backend code. Ready to add additional controls to backend API\" />\r\n    <MESSAGE value=\".\" />\r\n    <MESSAGE value=\"readme changes\" />\r\n    <MESSAGE value=\"Added stuff\" />\r\n    <MESSAGE value=\"added Json reference annotations and basic comment controler\" />\r\n    <MESSAGE value=\"added Json reference annotations and basic comment controller\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"added Json reference annotations and basic comment controller\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cd4de889dbf366830ca73d8a4a47429194aa2934)
++++ b/.idea/workspace.xml	(date 1674067845579)
+@@ -28,14 +28,11 @@
+     </select>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="added Json reference annotations and basic comment controller">
++    <list default="true" id="f8a02908-88a6-470e-9a0e-58e58c4db3f4" name="Default Changelist" comment="Refactored comment and review stuff and fixed cascade dependency.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfoController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -50,6 +47,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MavenImportPreferences">
+@@ -167,7 +169,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1674054229302</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Fixed a weird reference and some controller stuff">
++      <created>1674056702935</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1674056702935</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Refactored comment and review stuff and fixed cascade dependency.">
++      <created>1674065178435</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1674065178435</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -204,6 +220,8 @@
+     <MESSAGE value="Added stuff" />
+     <MESSAGE value="added Json reference annotations and basic comment controler" />
+     <MESSAGE value="added Json reference annotations and basic comment controller" />
+-    <option name="LAST_COMMIT_MESSAGE" value="added Json reference annotations and basic comment controller" />
++    <MESSAGE value="Fixed a weird reference and some controller stuff" />
++    <MESSAGE value="Refactored comment and review stuff and fixed cascade dependency." />
++    <option name="LAST_COMMIT_MESSAGE" value="Refactored comment and review stuff and fixed cascade dependency." />
+   </component>
+ </project>
+\ No newline at end of file
