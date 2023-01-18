@@ -1,4 +1,5 @@
 import { Box, TextField, Autocomplete, Button, Grid } from "@mui/material";
+import Like from "../components/Likes";
 
 interface Movies {
   movies: String[];
@@ -19,7 +20,7 @@ export default function AddComment({ movies }: Movies) {
         sx={{ height: "100%" }}
         alignItems="center"
         justifyContent="center"
-        spacing={2}
+        spacing={1}
       >
         <Grid item xs={12}>
           <Box display="flex" justifyContent="center" alignItems="center">
@@ -43,6 +44,9 @@ export default function AddComment({ movies }: Movies) {
             )}
           />
         </Grid>
+        <Grid item xs={2}>
+          <Like></Like>
+        </Grid>
         <Grid item xs={4}>
           <Button
             sx={{
@@ -53,7 +57,7 @@ export default function AddComment({ movies }: Movies) {
             }}
             variant="outlined"
           >
-            Submit Comment
+            Submit Review
           </Button>
         </Grid>
       </Grid>

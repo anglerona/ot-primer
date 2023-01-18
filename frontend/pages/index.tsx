@@ -26,6 +26,7 @@ export default function Home() {
           <input
             type="text"
             name="name"
+            minLength={1}
             value={username}
             onChange={(e) => handleUser(e)}
           ></input>
