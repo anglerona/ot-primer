@@ -102,13 +102,13 @@ export default function Home() {
         style={{
           textAlign: "center",
           paddingBottom: "20px",
-          paddingTop: "70px",
         }}
       >
         Top 5 Movies within the last 24 Hours
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
+        <a>Comments</a>
         <AddComment
           movies={Array.from(movieList, (movie) => movie.title)}
         ></AddComment>
