@@ -1,15 +1,14 @@
 package com.otprimer.backendserver.Vote;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.otprimer.backendserver.Review.ReviewInfo;
-import com.otprimer.backendserver.User.UserModel;
+import com.otprimer.backendserver.Review.Review;
 
 import javax.persistence.*;
 
 
 @Entity
-@Table(name="VoteModel", schema = "public" )
-public class VoteModel {
+@Table(name="Vote", schema = "public" )
+public class Vote {
     private @Id
     @GeneratedValue
     Integer id;
@@ -21,10 +20,10 @@ public class VoteModel {
 
     @OneToOne(mappedBy = "vote")
     @JsonBackReference
-    private ReviewInfo review;
+    private Review review;
 
-    public VoteModel(){}
-    VoteModel(Integer like_dislike, ReviewInfo review){
+    public Vote(){}
+    Vote(Integer like_dislike, Review review){
         this.like_dislike = like_dislike;
         //this.user= user;
         this.review = review;
@@ -34,7 +33,7 @@ public class VoteModel {
     public Integer getId(){
         return this.id;
     }
-    public ReviewInfo getReviewID(){return this.review; }
+    public Review getReviewID(){return this.review; }
     public Integer getLikeDislike(){return this.like_dislike;}
 
     public void setId(Integer id){
@@ -42,6 +41,6 @@ public class VoteModel {
     }
 //    public void setUserID(UserModel user_id){this.user = user;}
     public void setLikeDislike(Integer like_dislike){this.like_dislike = like_dislike;}
-    public void setReview(ReviewInfo review){this.review = review;}
+    public void setReview(Review review){this.review = review;}
 
 }

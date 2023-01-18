@@ -5,8 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -18,12 +16,12 @@ public class CommentController {
 
 
     @GetMapping
-    public Iterable<CommentModel> findAllUsers(){
+    public Iterable<Comment> findAllComments(){
         return commentRepository.findAll();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<CommentModel> findCommentById(@PathVariable(value = "id") Integer id) {
-        Optional<CommentModel> comment = commentRepository.findById(id);
+    public ResponseEntity<Comment> findCommentById(@PathVariable(value = "id") Integer id) {
+        Optional<Comment> comment = commentRepository.findById(id);
 
         if(comment.isPresent()) {
             return ResponseEntity.ok().body(comment.get());
@@ -33,13 +31,13 @@ public class CommentController {
         }
     }
     @PostMapping
-    public CommentModel saveComment(@Validated @RequestBody CommentModel comment) {
+    public Comment saveComment(@Validated @RequestBody Comment comment) {
         System.out.println(comment);
         return commentRepository.save(comment);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<CommentModel> deleteCommentById(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<Comment> deleteCommentById(@PathVariable(value = "id") Integer id) {
         commentRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
