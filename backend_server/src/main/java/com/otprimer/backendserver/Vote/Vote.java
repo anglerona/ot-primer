@@ -33,7 +33,7 @@ public class Vote {
     public Integer getId(){
         return this.id;
     }
-    public Review getReviewID(){return this.review; }
+    public Review getReview(){return this.review; }
     public Integer getLikeDislike(){return this.like_dislike;}
 
     public void setId(Integer id){
