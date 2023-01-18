@@ -25,6 +25,7 @@ export default function Home() {
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
   const [comments, setComments] = useState<CommentProperties[]>([
     { comment: "Good Movie", userID: "user100", reviewID: 123023 },
+    { comment: "Decent Movie", userID: "user24", reviewID: 123024 },
   ]);
 
   useEffect(() => {
@@ -62,11 +63,14 @@ export default function Home() {
   ));
 
   const listComments = comments.map((comment) => (
-    <Comment
-      key={comment.reviewID}
-      userID={comment.userID}
-      comment={comment.comment}
-    ></Comment>
+    <>
+      <Comment
+        key={comment.reviewID}
+        userID={comment.userID}
+        comment={comment.comment}
+      ></Comment>
+      <br></br>
+    </>
   ));
 
   return (

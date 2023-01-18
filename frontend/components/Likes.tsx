@@ -48,28 +48,26 @@ export default function Likes() {
   };
 
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <button
-          className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
-          onClick={handleLikeClick}
-        >
-          <span>
-            <ThumbUpOffAlt />{" "}
-          </span>
-          {likeCount}
-        </button>
+    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <button
+        className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
+        onClick={handleLikeClick}
+      >
+        <span>
+          <ThumbUpOffAlt />{" "}
+        </span>
+        {likeCount}
+      </button>
 
-        <button
-          className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
-          onClick={handleDisikeClick}
-        >
-          <span>
-            <ThumbDown />{" "}
-          </span>{" "}
-          {dislikeCount}
-        </button>
-      </div>
+      <button
+        className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
+        onClick={handleDisikeClick}
+      >
+        <span>
+          <ThumbDown />{" "}
+        </span>{" "}
+        {dislikeCount}
+      </button>
     </div>
   );
 }
