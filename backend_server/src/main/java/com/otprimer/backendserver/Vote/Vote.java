@@ -2,11 +2,13 @@ package com.otprimer.backendserver.Vote;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.otprimer.backendserver.Review.Review;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 
 
 @Entity
+@CrossOrigin
 @Table(name="Vote", schema = "public" )
 public class Vote {
     private @Id
