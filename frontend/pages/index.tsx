@@ -11,7 +11,8 @@ export default function Home() {
   };
   const submitUser = async (e) => {
     // e.preventDefault();
-    const resp = await axios.post("http://localhost:3000/", { username });
+    const resp = await axios.post("http://localhost:8080/user", { id: username, userName: username });
+    console.log({username})
     resp.data.json;
   };
 

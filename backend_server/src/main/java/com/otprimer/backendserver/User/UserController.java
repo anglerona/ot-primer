@@ -24,8 +24,20 @@ public class UserController {
 
     @PostMapping
     public User saveUser(@Validated @RequestBody User user) {
-        System.out.println(user);
+        
         return userRepository.save(user);
+    }
+
+    @PostMapping(path="/new")
+    public User saveNewUser(@Validated @RequestBody User user) {
+        Optional<User> newuser = userRepository.findById(user.getId());
+
+        if(newuser.isPresent()) {
+            return newuser.get();
+        }
+        else{
+            return userRepository.save(user);
+        }
     }
 
 
