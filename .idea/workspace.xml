@@ -32,8 +32,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ERDiagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/ERDiagram.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Comment/CommentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Movie/MovieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Review/ReviewInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/User/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/VoteModel.java" afterDir="false" />
     </list>

@@ -16,22 +16,23 @@ public class CommentModel {
 
     private String comment;
 
-    @OneToOne(mappedBy = "comment")
-    private UserModel user;
+//    @OneToOne0(mappedBy = "comment")
+//    private UserModel user;
+
     @OneToOne(mappedBy = "comment")
     private ReviewInfo review;
 
     public CommentModel(){}
 
-    CommentModel(String comment, UserModel user, ReviewInfo review){
+    CommentModel(String comment, ReviewInfo review){
         this.comment = comment;
-        this.user = user;
+//        this.user = user;
         this.review = review;
     }
 
-    public UserModel getUserID(){
-        return this.user;
-    }
+//    public UserModel getUserID(){
+//        return this.user;
+//    }
     public ReviewInfo getReviewID(){
         return this.review;
     }
@@ -45,9 +46,9 @@ public class CommentModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setUserID(UserModel user){
-        this.user = user;
-    }
+//    public void setUserID(UserModel user){
+//        this.user = user;
+//    }
     public void setReviewID(ReviewInfo review){
         this.review = review;
     }

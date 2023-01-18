@@ -1,6 +1,8 @@
 package com.otprimer.backendserver.User;
 
+import com.otprimer.backendserver.Comment.CommentModel;
 import com.otprimer.backendserver.Review.ReviewInfo;
+import com.otprimer.backendserver.Vote.VoteModel;
 
 import javax.persistence.*;
 import java.util.Set;

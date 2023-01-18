@@ -15,20 +15,20 @@ public class VoteModel {
 
     private Integer like_dislike;
 
-    @OneToOne(mappedBy = "vote")
-    private UserModel user;
+//    @OneToOne(mappedBy = "vote")
+//    private UserModel user;
 
     @OneToOne(mappedBy = "vote")
     private ReviewInfo review;
 
     public VoteModel(){}
-    VoteModel(Integer like_dislike, UserModel user, ReviewInfo review){
+    VoteModel(Integer like_dislike, ReviewInfo review){
         this.like_dislike = like_dislike;
-        this.user= user;
+        //this.user= user;
         this.review = review;
     }
 
-    public UserModel getUserID(){return this.user;}
+//    public UserModel getUserID(){return this.user;}
     public Integer getId(){
         return this.id;
     }
@@ -38,7 +38,7 @@ public class VoteModel {
     public void setId(Integer id){
         this.id = id;
     }
-    public void setUserID(UserModel user_id){this.user = user;}
+//    public void setUserID(UserModel user_id){this.user = user;}
     public void setLikeDislike(Integer like_dislike){this.like_dislike = like_dislike;}
     public void setReviewID(ReviewInfo review){this.review = review;}
 
