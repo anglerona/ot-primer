@@ -13,10 +13,19 @@ interface MovieProperties {
   poster_path: String;
 }
 
+interface CommentProperties {
+  comment: String;
+  userID: String;
+  reviewID: number;
+}
+
 export default function Home() {
   const userName = useSearchParams().get("username");
 
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
+  const [comments, setComments] = useState<CommentProperties[]>([
+    { comment: "Good Movie", userID: "user100", reviewID: 123023 },
+  ]);
 
   useEffect(() => {
     const sendGetRequest = async () => {
@@ -29,7 +38,17 @@ export default function Home() {
         console.error(err);
       }
     };
+    const getComments = async () => {
+      try {
+        const resp = await axios.get("add url");
+        setComments(resp.data.results);
+      } catch (err) {
+        console.error(err);
+      }
+    };
     sendGetRequest();
+
+    // call getcomments here
   }, []);
 
   const listItems = movieList.map((movie) => (
@@ -40,6 +59,14 @@ export default function Home() {
         movieImg={movie.poster_path}
       ></Movie>
     </>
+  ));
+
+  const listComments = comments.map((comment) => (
+    <Comment
+      key={comment.reviewID}
+      userID={comment.userID}
+      comment={comment.comment}
+    ></Comment>
   ));
 
   return (
@@ -82,8 +109,11 @@ export default function Home() {
       </h3>
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
-        <AddComment movies={movieList}></AddComment>
-        <Comment></Comment>
+        <AddComment
+          movies={Array.from(movieList, (movie) => movie.title)}
+        ></AddComment>
+        <br></br>
+        <div id="comments-container">{listComments}</div>
       </div>
     </>
   );

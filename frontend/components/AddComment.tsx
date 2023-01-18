@@ -1,40 +1,65 @@
-import { useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 interface Movies {
-  movies: MovieProperties[];
-}
-
-interface MovieProperties {
-  title: String;
-  id: number;
-  poster_path: String;
+  movies: String[];
 }
 
 export default function AddComment({ movies }: Movies) {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open);
-  };
-
-  const listMovies = movies.map((movie) => (
-    <>
-      <h5>{movie.title}</h5>
-    </>
-  ));
-
   return (
-    <>
-      <div id="add-comment-container">
-        <label style={{ marginRight: "70px" }} id="column">
-          <input type="text" name="name" style={{ width: "100%" }}></input>
-        </label>
-        <div id="add-comment-forms" style={{ justifyContent: "center" }}>
-          <button onClick={handleOpen}>Dropdown</button>
-          {open ? listMovies : null}
-          <button>Submit Comment</button>
-        </div>
-      </div>
-    </>
+    <Box
+      sx={{
+        width: 800,
+        height: 200,
+        backgroundColor: "#d9d9d9 ",
+      }}
+    >
+      <Grid
+        container
+        sx={{ height: "100%" }}
+        alignItems="center"
+        justifyContent="center"
+        spacing={2}
+      >
+        <Grid item xs={12}>
+          <Box display="flex" justifyContent="center" alignItems="center">
+            <TextField
+              sx={{ width: "75%", backgroundColor: "white" }}
+              size="medium"
+              id="outlined-basic"
+              label="Comment"
+              variant="outlined"
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={4}>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={movies}
+            sx={{ width: "100%", backgroundColor: "white" }}
+            renderInput={(params) => (
+              <TextField {...params} label="Select Movie" />
+            )}
+          />
+        </Grid>
+        <Grid item xs={4}>
+          <Button
+            sx={{
+              color: "black",
+              borderColor: "gray",
+              backgroundColor: "white",
+              width: "80%",
+            }}
+            variant="outlined"
+          >
+            Submit Comment
+          </Button>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }

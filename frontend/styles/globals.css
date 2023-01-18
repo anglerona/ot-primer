@@ -46,6 +46,8 @@
   width: 50%;
   height: 100px;
   background-color: #d3d3d3;
+  display: flex;
+  flex-direction: row;
 }
 
 #single-movie-container {
