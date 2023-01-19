@@ -22,6 +22,9 @@ public class Movie {
 
     private String name;
 
+    private Integer likes = 0;
+    private Integer dislikes = 0;
+
 
     public Movie(){}
 
@@ -51,4 +54,19 @@ public class Movie {
         this.review= review;
     }
 
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Integer getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(Integer dislikes) {
+        this.dislikes = dislikes;
+    }
 }
