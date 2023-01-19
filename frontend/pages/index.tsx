@@ -2,9 +2,11 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [username, setUsername] = useState("");
+  const router = useRouter();
 
   const handleUser = (e) => {
     setUsername(e.target.value);
@@ -15,6 +17,7 @@ export default function Home() {
       userName: username,
     });
     resp.data.json;
+    router.push("/main");
   };
 
   return (

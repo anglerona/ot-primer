@@ -45,7 +45,7 @@ export default function AddComment({ movies }: Movies) {
           />
         </Grid>
         <Grid item xs={2}>
-          <Like></Like>
+          <Like isStatic={false}></Like>
         </Grid>
         <Grid item xs={4}>
           <Button
