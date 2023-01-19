@@ -7,6 +7,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // This allows for automatic response body
+@CrossOrigin
 @RequestMapping(path="/vote")
 public class VoteController {
     @Autowired
