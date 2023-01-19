@@ -8,10 +8,12 @@ import {
 import { Box, Grid, Divider } from "@mui/material";
 interface LikeProperties {
   isStatic: boolean;
+  staticLikeCount: number;
+  staticDislikeCount: number;
 }
 
 export default function Likes(props: LikeProperties) {
-  const { isStatic } = props;
+  const { isStatic, staticLikeCount, staticDislikeCount } = props;
   const [likeCount, setLikeCount] = useState(0);
   const [dislikeCount, setDislikeCount] = useState(0);
 
@@ -98,9 +100,9 @@ export default function Likes(props: LikeProperties) {
           }}
         >
           <ThumbUpOffAlt />
-          {likeCount}
+          {staticLikeCount}
           <Divider orientation="vertical" flexItem></Divider>
-          {dislikeCount}
+          {staticDislikeCount}
           <ThumbDownAltOutlined />
         </Box>
       )}

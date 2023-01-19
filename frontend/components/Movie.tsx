@@ -1,6 +1,6 @@
 import Like from "../components/Likes";
 import { CardHeader, CardMedia, Card, CardContent } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 interface MovieProperties {
@@ -11,14 +11,17 @@ interface MovieProperties {
 
 export default function Movie(props: MovieProperties) {
   const { movieTitle, movieImg, movieId } = props;
-  console.log(movieId)
+  const [staticLikeCount, setStaticLikeCount] = useState(0);
+  const [staticDislikeCount, setStaticDislikeCount] = useState(0);
+
   const getLikeCounts = async () => {
     try {
       const resp = await axios.post("http://localhost:8080/movie/new", {
         id: movieId,
         name: movieTitle,
       });
-      console.log(resp);
+      setStaticDislikeCount(resp.data.dislikes);
+      setStaticLikeCount(resp.data.likes);
     } catch (err) {
       console.error(err);
     }
@@ -43,7 +46,11 @@ export default function Movie(props: MovieProperties) {
           alt="Movie Poster"
         />
         <CardContent>
-          <Like isStatic={true}></Like>
+          <Like
+            isStatic={true}
+            staticLikeCount={staticLikeCount}
+            staticDislikeCount={staticDislikeCount}
+          ></Like>
         </CardContent>
       </div>
     </Card>
