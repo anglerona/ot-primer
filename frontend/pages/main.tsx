@@ -24,13 +24,13 @@ export default function Home() {
     { comment: "Decent Movie", userID: "user24", reviewID: 123024 },
   ]);
 
-  let userName;
-  if (typeof window !== "undefined") {
-    const queryParams = new URLSearchParams(window.location.search);
-    userName = queryParams.get("user");
-  }
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const queryParams = new URLSearchParams(window.location.search);
+      setUsername(queryParams.get("user") || "");
+    }
     const sendGetRequest = async () => {
       try {
         const resp = await axios.get(
@@ -93,7 +93,7 @@ export default function Home() {
             <circle cx={12} cy={7} r={4}></circle>
             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
           </svg>
-          {userName}
+          {username}
         </div>
         <div className="log-out">
           <Link href="/">
