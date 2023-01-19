@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { ThumbUpOffAlt, ThumbDown } from "@mui/icons-material";
+import {
+  ThumbUpOffAlt,
+  ThumbDown,
+  ThumbUp,
+  ThumbDownAltOutlined,
+} from "@mui/icons-material";
 import { Box, Grid, Divider } from "@mui/material";
 interface LikeProperties {
   isStatic: boolean;
@@ -72,7 +77,7 @@ export default function Likes(props: LikeProperties) {
           onClick={handleDisikeClick}
         >
           <span>
-            <ThumbDown />{" "}
+            <ThumbDownAltOutlined />{" "}
           </span>{" "}
           {dislikeCount}
         </button>
@@ -96,7 +101,7 @@ export default function Likes(props: LikeProperties) {
           {likeCount}
           <Divider orientation="vertical" flexItem></Divider>
           {dislikeCount}
-          <ThumbDown />
+          <ThumbDownAltOutlined />
         </Box>
       )}
     </div>
