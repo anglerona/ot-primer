@@ -10,6 +10,7 @@ interface CommentProperties {
 
 export default function Comment(props: CommentProperties) {
   const { comment, userID, movieTitle, vote } = props;
+  console.log(props)
   return (
     <Box
       sx={{

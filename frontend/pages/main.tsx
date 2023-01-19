@@ -13,14 +13,17 @@ interface MovieProperties {
 }
 interface ReviewProperties {
   comment: CommentProperties;
-  userID: String;
+  username: String;
   reviewID: number;
   movieName: String;
-  vote: number;
+  vote: VoteProperties;
 }
 
 interface CommentProperties {
   body: String;
+}
+interface VoteProperties{
+  likeDislike: number;
 }
 
 export default function Home() {
@@ -69,12 +72,13 @@ export default function Home() {
 
   const listComments = reviewList.map((review) => (
     <>
+      {console.log(review)}
       <Comment
         key={review.reviewID}
-        userID={review.userID}
+        userID={review.username}
         comment={review.comment.body}
         movieTitle={review.movieName}
-        vote={review.vote}
+        vote={review.vote.likeDislike}
       ></Comment>
       <br></br>
     </>
