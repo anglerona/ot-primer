@@ -5,8 +5,6 @@ import Movie from "../components/Movie";
 import Comment from "../components/Comment";
 import AddComment from "../components/AddComment";
 
-import { useSearchParams } from "next/navigation";
-
 interface MovieProperties {
   title: String;
   id: number;
@@ -20,13 +18,17 @@ interface CommentProperties {
 }
 
 export default function Home() {
-  const userName = useSearchParams().get("username");
-
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
   const [comments, setComments] = useState<CommentProperties[]>([
     { comment: "Good Movie", userID: "user100", reviewID: 123023 },
     { comment: "Decent Movie", userID: "user24", reviewID: 123024 },
   ]);
+
+  let userName;
+  if (typeof window !== "undefined") {
+    const queryParams = new URLSearchParams(window.location.search);
+    userName = queryParams.get("user");
+  }
 
   useEffect(() => {
     const sendGetRequest = async () => {
@@ -93,6 +95,7 @@ export default function Home() {
             <circle cx={12} cy={7} r={4}></circle>
             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
           </svg>
+          {userName}
         </div>
         <div className="log-out">
           <Link href="/">
