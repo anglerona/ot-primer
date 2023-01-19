@@ -50,8 +50,6 @@ export default function Home() {
       }
     };
     sendGetRequest();
-
-    // call getcomments here
   }, []);
 
   const listItems = movieList.map((movie) => (

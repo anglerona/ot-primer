@@ -1,11 +1,27 @@
 import { Box, TextField, Autocomplete, Button, Grid } from "@mui/material";
 import Like from "../components/Likes";
+import axios from "axios";
+import { useState } from "react";
 
 interface Movies {
   movies: String[];
 }
 
 export default function AddComment({ movies }: Movies) {
+  const [comment, setComment] = useState();
+  const [vote, setVote] = useState(0);
+
+  const handleComment = (e) => {
+    setComment(e.target.value);
+  };
+
+  const submitComment = async () => {
+    const resp = await axios.post("http://localhost:8080", {
+      comment: comment,
+    });
+    resp.data.json;
+  };
+
   return (
     <Box
       sx={{
@@ -39,6 +55,7 @@ export default function AddComment({ movies }: Movies) {
             disablePortal
             id="combo-box-demo"
             options={movies}
+            onChange={handleComment}
             sx={{ width: "100%", backgroundColor: "white" }}
             renderInput={(params) => (
               <TextField required {...params} label="Select Movie" />
@@ -56,6 +73,7 @@ export default function AddComment({ movies }: Movies) {
               backgroundColor: "white",
               width: "80%",
             }}
+            onClick={submitComment}
             variant="outlined"
           >
             Submit Review
