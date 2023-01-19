@@ -28,14 +28,13 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const queryParams = new URLSearchParams(window.location.search);
-      setUsername(queryParams.get("user") || "");
+      setUsername(
+        new URLSearchParams(window.location.search).get("user") || ""
+      );
     }
-    const sendGetRequest = async () => {
+    const getAllMovies = async () => {
       try {
-        const resp = await axios.get(
-          "http://localhost:8080/all/movies"
-        );
+        const resp = await axios.get("http://localhost:8080/all/movies");
         setMovieList(resp.data.results.slice(0, 5));
       } catch (err) {
         console.error(err);
@@ -49,7 +48,7 @@ export default function Home() {
         console.error(err);
       }
     };
-    sendGetRequest();
+    getAllMovies();
   }, []);
 
   const listItems = movieList.map((movie) => (

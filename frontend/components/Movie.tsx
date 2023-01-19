@@ -1,12 +1,32 @@
 import Like from "../components/Likes";
 import { CardHeader, CardMedia, Card, CardContent } from "@mui/material";
+import { useEffect } from "react";
+import axios from "axios";
+
 interface MovieProperties {
+  key: number;
   movieTitle: String;
   movieImg: String;
 }
 
 export default function Movie(props: MovieProperties) {
-  const { movieTitle, movieImg } = props;
+  const { key, movieTitle, movieImg } = props;
+  console.log(key);
+  useEffect(() => {
+    const getLikeCounts = async () => {
+      try {
+        const resp = await axios.post("http://localhost:8080/movies/new", {
+          id: key,
+          userName: movieTitle,
+        });
+        console.log(resp);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getLikeCounts();
+  }, []);
+
   return (
     <Card sx={{ width: 200 }}>
       <div id="single-movie-container">
