@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController // This allows for automatic response body
+@CrossOrigin
 @RequestMapping(path="/all")
 public class MovieDbController{
     @GetMapping("/movies")

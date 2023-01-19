@@ -9,6 +9,8 @@ import com.otprimer.backendserver.Movie.Movie;
 import com.otprimer.backendserver.Comment.Comment;
 import com.otprimer.backendserver.Vote.Vote;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name="Review", schema = "public" )
 public class Review {
@@ -39,6 +41,7 @@ public class Review {
 
     private String username;
     private String movieName;
+    private LocalDateTime created;
 
     public Review(){}
 
@@ -97,5 +100,11 @@ public class Review {
         this.vote = vote;
     }
 
+    public LocalDateTime getCreated() {
+        return created;
+    }
 
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
 }
