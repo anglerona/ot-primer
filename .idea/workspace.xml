@@ -28,9 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f77e746-3afa-4dca-b34b-ab7dd224b707" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/main/java/com/otprimer/backendserver/Vote/Vote.java" afterDir="false" />
-    </list>
+    <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +115,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1674077986252">
