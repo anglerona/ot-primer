@@ -6,6 +6,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // This allows for automatic response body
+@CrossOrigin
 @RequestMapping(path="/review")
 public class ReviewController {
     @Autowired
@@ -28,6 +29,7 @@ public class ReviewController {
         review.getComment().setReview(review);
         review.setUsername(review.getUser().getId());
         review.setMovieName(review.getMovie().getName());
+        review.getVote().setReview(review);
         return reviewRepository.save(review);
     }
 
