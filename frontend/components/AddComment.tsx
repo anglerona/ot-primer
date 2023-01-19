@@ -30,6 +30,7 @@ export default function AddComment({ movies }: Movies) {
               id="outlined-basic"
               label="Comment"
               variant="outlined"
+              required
             />
           </Box>
         </Grid>
@@ -40,7 +41,7 @@ export default function AddComment({ movies }: Movies) {
             options={movies}
             sx={{ width: "100%", backgroundColor: "white" }}
             renderInput={(params) => (
-              <TextField {...params} label="Select Movie" />
+              <TextField required {...params} label="Select Movie" />
             )}
           />
         </Grid>
