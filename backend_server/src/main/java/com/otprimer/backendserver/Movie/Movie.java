@@ -12,7 +12,6 @@ import java.util.Set;
 @Table(name="Movie", schema = "public" )
 public class Movie {
     private @Id
-    @GeneratedValue
     Integer id;
 
 

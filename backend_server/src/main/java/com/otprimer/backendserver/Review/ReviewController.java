@@ -28,12 +28,8 @@ public class ReviewController {
     public Review saveReview(@Validated @RequestBody Review review){
         review.getComment().setReview(review);
         review.setUsername(review.getUser().getId());
-<<<<<<< Updated upstream
-//        review.setMovieName(review.getMovie().getName());
-        //review.getVote().setReview(review);
-=======
-        //review.setMovieName(review.getMovie().getName());
->>>>>>> Stashed changes
+        review.setMovieName(review.getMovie().getName());
+        review.getVote().setReview(review);
         return reviewRepository.save(review);
     }
 

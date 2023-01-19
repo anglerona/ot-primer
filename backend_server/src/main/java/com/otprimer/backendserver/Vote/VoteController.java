@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class VoteController {
     @Autowired
 
-    private final VoteRepository voteRepository;
-
-
-    public VoteController(final VoteRepository voteRepository){
-        this.voteRepository = voteRepository;
-    }
+    private VoteRepository voteRepository;
 
     @GetMapping()
     public Iterable<Vote> getAllVotes() {
