@@ -34,7 +34,7 @@ export default function Home() {
     const sendGetRequest = async () => {
       try {
         const resp = await axios.get(
-          "https://api.themoviedb.org/3/trending/movie/day?api_key=781cd82e7790ae7403010d9f126bcc2c"
+          "http://localhost:8080/all/movies"
         );
         setMovieList(resp.data.results.slice(0, 5));
       } catch (err) {
