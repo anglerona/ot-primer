@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Comment from "../components/Comment";
 import AddComment from "../components/AddComment";
+import { MovieRounded } from "@mui/icons-material";
 
 interface MovieProperties {
   title: String;
@@ -25,38 +26,40 @@ export default function Home() {
   ]);
 
   const [username, setUsername] = useState("");
-
+  const getAllMovies = async () => {
+    try {
+      const resp = await axios.get("http://localhost:8080/all/movies");
+      setMovieList(resp.data.results.slice(0, 5));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const getComments = async () => {
+    try {
+      const resp = await axios.get("add url");
+      setComments(resp.data.results);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   useEffect(() => {
     if (typeof window !== "undefined") {
       setUsername(
         new URLSearchParams(window.location.search).get("user") || ""
       );
     }
-    const getAllMovies = async () => {
-      try {
-        const resp = await axios.get("http://localhost:8080/all/movies");
-        setMovieList(resp.data.results.slice(0, 5));
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    const getComments = async () => {
-      try {
-        const resp = await axios.get("add url");
-        setComments(resp.data.results);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+
     getAllMovies();
   }, []);
 
   const listItems = movieList.map((movie) => (
     <>
+    {console.log(movie)}
       <Movie
         key={movie.id}
         movieTitle={movie.title}
         movieImg={movie.poster_path}
+        movieId={movie.id}
       ></Movie>
     </>
   ));

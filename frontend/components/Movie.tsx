@@ -4,26 +4,26 @@ import { useEffect } from "react";
 import axios from "axios";
 
 interface MovieProperties {
-  key: number;
   movieTitle: String;
   movieImg: String;
+  movieId: number;
 }
 
 export default function Movie(props: MovieProperties) {
-  const { key, movieTitle, movieImg } = props;
-  console.log(key);
+  const { movieTitle, movieImg, movieId } = props;
+  console.log(movieId)
+  const getLikeCounts = async () => {
+    try {
+      const resp = await axios.post("http://localhost:8080/movie/new", {
+        id: movieId,
+        name: movieTitle,
+      });
+      console.log(resp);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   useEffect(() => {
-    const getLikeCounts = async () => {
-      try {
-        const resp = await axios.post("http://localhost:8080/movies/new", {
-          id: key,
-          userName: movieTitle,
-        });
-        console.log(resp);
-      } catch (err) {
-        console.error(err);
-      }
-    };
     getLikeCounts();
   }, []);
 
