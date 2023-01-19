@@ -4,20 +4,39 @@ import axios from "axios";
 import { useState } from "react";
 
 interface Movies {
-  movies: String[];
+  movies: MovieProperties[];
 }
 
-export default function AddComment({ movies }: Movies) {
-  const [comment, setComment] = useState();
+interface MovieProperties {
+  title: String;
+  id: number;
+  poster_path: String;
+}
+
+interface User {
+  username: String;
+}
+
+interface Review extends Movies, User {}
+
+export default function AddComment({ movies, username }: Review) {
+  const [comment, setComment] = useState("");
   const [vote, setVote] = useState(0);
+  const [movie, setMovie] = useState(0);
 
   const handleComment = (e) => {
     setComment(e.target.value);
   };
 
+  const handleMovie = (e) => {
+    console.log(e);
+  };
+
   const submitComment = async () => {
     const resp = await axios.post("http://localhost:8080", {
-      comment: comment,
+      user: { id: username },
+      comment: { body: comment },
+      movie: { id: movie.id },
     });
     resp.data.json;
   };
@@ -47,6 +66,7 @@ export default function AddComment({ movies }: Movies) {
               label="Comment"
               variant="outlined"
               required
+              onChange={handleComment}
             />
           </Box>
         </Grid>
@@ -54,8 +74,8 @@ export default function AddComment({ movies }: Movies) {
           <Autocomplete
             disablePortal
             id="combo-box-demo"
-            options={movies}
-            onChange={handleComment}
+            options={Array.from(movies, (movie) => movie.title)}
+            onChange={handleMovie}
             sx={{ width: "100%", backgroundColor: "white" }}
             renderInput={(params) => (
               <TextField required {...params} label="Select Movie" />

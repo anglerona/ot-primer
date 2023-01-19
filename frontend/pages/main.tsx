@@ -22,7 +22,7 @@ interface ReviewProperties {
 interface CommentProperties {
   body: String;
 }
-interface VoteProperties{
+interface VoteProperties {
   likeDislike: number;
 }
 
@@ -124,9 +124,7 @@ export default function Home() {
       <div id="movie-container">{listItems}</div>
       <div id="comment-container">
         <a>Comments</a>
-        <AddComment
-          movies={Array.from(movieList, (movie) => movie.title)}
-        ></AddComment>
+        <AddComment movies={movieList} username={username}></AddComment>
         <a>All Comments</a>
         <br></br>
         <div>{listComments}</div>
