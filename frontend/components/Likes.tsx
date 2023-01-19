@@ -1,7 +1,17 @@
 import { useState } from "react";
-import { ThumbUpOffAlt, ThumbDown } from "@mui/icons-material";
+import {
+  ThumbUpOffAlt,
+  ThumbDown,
+  ThumbUp,
+  ThumbDownAltOutlined,
+} from "@mui/icons-material";
+import { Box, Grid, Divider } from "@mui/material";
+interface LikeProperties {
+  isStatic: boolean;
+}
 
-export default function Likes() {
+export default function Likes(props: LikeProperties) {
+  const { isStatic } = props;
   const [likeCount, setLikeCount] = useState(0);
   const [dislikeCount, setDislikeCount] = useState(0);
 
@@ -49,25 +59,51 @@ export default function Likes() {
 
   return (
     <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-      <button
-        className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
-        onClick={handleLikeClick}
-      >
-        <span>
-          <ThumbUpOffAlt />{" "}
-        </span>
-        {likeCount}
-      </button>
+      {!isStatic && (
+        <button
+          className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
+          onClick={handleLikeClick}
+        >
+          <span>
+            <ThumbUpOffAlt />{" "}
+          </span>
+          {likeCount}
+        </button>
+      )}
 
-      <button
-        className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
-        onClick={handleDisikeClick}
-      >
-        <span>
-          <ThumbDown />{" "}
-        </span>{" "}
-        {dislikeCount}
-      </button>
+      {!isStatic && (
+        <button
+          className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
+          onClick={handleDisikeClick}
+        >
+          <span>
+            <ThumbDownAltOutlined />{" "}
+          </span>{" "}
+          {dislikeCount}
+        </button>
+      )}
+
+      {isStatic && (
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            backgroundColor: "#d9d9d9 ",
+            gap: "7%",
+            padding: "3% 12% 3% 12%",
+            borderRadius: "25px",
+            boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.2)",
+          }}
+        >
+          <ThumbUpOffAlt />
+          {likeCount}
+          <Divider orientation="vertical" flexItem></Divider>
+          {dislikeCount}
+          <ThumbDownAltOutlined />
+        </Box>
+      )}
     </div>
   );
 }

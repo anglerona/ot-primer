@@ -23,7 +23,7 @@ export default function Movie(props: MovieProperties) {
           alt="Movie Poster"
         />
         <CardContent>
-          <Like></Like>
+          <Like isStatic={true}></Like>
         </CardContent>
       </div>
     </Card>

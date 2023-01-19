@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController // This allows for automatic response body
 @CrossOrigin
-@RequestMapping(path="/")
+@RequestMapping(path="/all")
 public class MovieDbController{
     @GetMapping("/movies")
     public ResponseEntity<?> getMovies() {
