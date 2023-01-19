@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import {
   ThumbUpOffAlt,
   ThumbDown,
   ThumbUp,
   ThumbDownAltOutlined,
+  SettingsVoiceTwoTone,
 } from "@mui/icons-material";
 import { Box, Grid, Divider } from "@mui/material";
 interface LikeProperties {
   isStatic: boolean;
   staticLikeCount: number;
   staticDislikeCount: number;
+  setVote:  Dispatch<SetStateAction<number>>;
 }
 
 export default function Likes(props: LikeProperties) {
-  const { isStatic, staticLikeCount, staticDislikeCount } = props;
+  const { isStatic, staticLikeCount, staticDislikeCount, setVote } = props;
   const [likeCount, setLikeCount] = useState(0);
   const [dislikeCount, setDislikeCount] = useState(0);
 
@@ -23,12 +25,14 @@ export default function Likes(props: LikeProperties) {
     if (activeBtn === "none") {
       setLikeCount(likeCount + 1);
       setActiveBtn("like");
+      setVote(1);
       return;
     }
 
     if (activeBtn === "like") {
       setLikeCount(likeCount - 1);
       setActiveBtn("none");
+      setVote(0);
       return;
     }
 
@@ -36,6 +40,7 @@ export default function Likes(props: LikeProperties) {
       setLikeCount(likeCount + 1);
       setDislikeCount(dislikeCount - 1);
       setActiveBtn("like");
+      setVote(1);
     }
   };
 
@@ -43,12 +48,14 @@ export default function Likes(props: LikeProperties) {
     if (activeBtn === "none") {
       setDislikeCount(dislikeCount + 1);
       setActiveBtn("dislike");
+      setVote(-1);
       return;
     }
 
     if (activeBtn === "dislike") {
       setDislikeCount(dislikeCount - 1);
       setActiveBtn("none");
+      setVote(0);
       return;
     }
 
@@ -56,7 +63,9 @@ export default function Likes(props: LikeProperties) {
       setDislikeCount(dislikeCount + 1);
       setLikeCount(likeCount - 1);
       setActiveBtn("dislike");
+      setVote(-1);
     }
+    
   };
 
   return (

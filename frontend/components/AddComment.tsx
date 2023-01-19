@@ -1,7 +1,9 @@
 import { Box, TextField, Autocomplete, Button, Grid } from "@mui/material";
 import Like from "../components/Likes";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { isConstructorDeclaration } from "typescript";
+import Router from "next/router";
 
 interface Movies {
   movies: MovieProperties[];
@@ -21,24 +23,34 @@ interface Review extends Movies, User {}
 
 export default function AddComment({ movies, username }: Review) {
   const [comment, setComment] = useState("");
-  const [vote, setVote] = useState(0);
   const [movie, setMovie] = useState(0);
+  const [vote, setVote] = useState(0);
 
   const handleComment = (e) => {
+    console.log(e.target.value);
     setComment(e.target.value);
   };
 
-  const handleMovie = (e) => {
-    console.log(e);
+  const handleMovie = (event, value) => {
+    let movieid = 0;
+    for(let i = 0; i < 5; i++){
+      if(movies[i].title == value){
+        movieid = movies[i].id;
+        break;
+      }
+    }
+    setMovie(movieid);
   };
 
   const submitComment = async () => {
-    const resp = await axios.post("http://localhost:8080", {
+    const resp = await axios.post("http://localhost:8080/review", {
       user: { id: username },
       comment: { body: comment },
-      movie: { id: movie.id },
+      movie: { id: movie },
+      vote: {likeDislike: vote}
     });
     resp.data.json;
+    Router.reload();
   };
 
   return (
@@ -75,15 +87,15 @@ export default function AddComment({ movies, username }: Review) {
             disablePortal
             id="combo-box-demo"
             options={Array.from(movies, (movie) => movie.title)}
-            onChange={handleMovie}
             sx={{ width: "100%", backgroundColor: "white" }}
+            onChange={handleMovie}
             renderInput={(params) => (
               <TextField required {...params} label="Select Movie" />
             )}
           />
         </Grid>
         <Grid item xs={2}>
-          <Like isStatic={false}></Like>
+          <Like isStatic={false} setVote={setVote}></Like>
         </Grid>
         <Grid item xs={4}>
           <Button

@@ -13,6 +13,7 @@ export default function Movie(props: MovieProperties) {
   const { movieTitle, movieImg, movieId } = props;
   const [staticLikeCount, setStaticLikeCount] = useState(0);
   const [staticDislikeCount, setStaticDislikeCount] = useState(0);
+  const [vote, setVote] = useState(0);
 
   const getLikeCounts = async () => {
     try {
@@ -42,7 +43,7 @@ export default function Movie(props: MovieProperties) {
         <CardMedia
           component="img"
           height="194"
-          image={"https://image.tmdb.org/t/p/original/" + movieImg}
+          image={"https://image.tmdb.org/t/p/w220_and_h330_face/" + movieImg}
           alt="Movie Poster"
         />
         <CardContent>
