@@ -25,7 +25,7 @@ interface CommentProperties {
 
 export default function Home() {
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
-  const [reviewList, setReviewList] = useState<CommentProperties[]>([]);
+  const [reviewList, setReviewList] = useState<ReviewProperties[]>([]);
 
   const [username, setUsername] = useState("");
   const getAllMovies = async () => {
@@ -51,8 +51,8 @@ export default function Home() {
         new URLSearchParams(window.location.search).get("user") || ""
       );
     }
-
     getAllMovies();
+    getReviews();
   }, []);
 
   const listItems = movieList.map((movie) => (
@@ -67,16 +67,24 @@ export default function Home() {
     </>
   ));
 
-  const listComments = comments.map((comment) => (
+  const listComments = reviewList.map((review) => (
     <>
       <Comment
-        key={comment.reviewID}
-        userID={comment.userID}
-        comment={comment.comment}
+        key={review.reviewID}
+        userID={review.userID}
+        comment={review.comment.body}
       ></Comment>
       <br></br>
     </>
   ));
+
+  // interface ReviewProperties {
+  //   comment: CommentProperties;
+  //   userID: String;
+  //   reviewID: number;
+  //   movieName: String;
+  //   vote: number;
+  // }
 
   return (
     <>
