@@ -11,19 +11,21 @@ interface MovieProperties {
   id: number;
   poster_path: String;
 }
-
-interface CommentProperties {
-  comment: String;
+interface ReviewProperties {
+  comment: CommentProperties;
   userID: String;
   reviewID: number;
+  movieName: String;
+  vote: number;
+}
+
+interface CommentProperties {
+  body: String;
 }
 
 export default function Home() {
   const [movieList, setMovieList] = useState<MovieProperties[]>([]);
-  const [comments, setComments] = useState<CommentProperties[]>([
-    { comment: "Good Movie", userID: "user100", reviewID: 123023 },
-    { comment: "Decent Movie", userID: "user24", reviewID: 123024 },
-  ]);
+  const [reviewList, setReviewList] = useState<CommentProperties[]>([]);
 
   const [username, setUsername] = useState("");
   const getAllMovies = async () => {
@@ -34,10 +36,11 @@ export default function Home() {
       console.error(err);
     }
   };
-  const getComments = async () => {
+  const getReviews = async () => {
     try {
-      const resp = await axios.get("add url");
-      setComments(resp.data.results);
+      const resp = await axios.get("http://localhost:8080/review");
+      setReviewList(resp.data);
+      console.log(resp.data);
     } catch (err) {
       console.error(err);
     }
@@ -54,7 +57,7 @@ export default function Home() {
 
   const listItems = movieList.map((movie) => (
     <>
-    {console.log(movie)}
+      {console.log(movie)}
       <Movie
         key={movie.id}
         movieTitle={movie.title}
