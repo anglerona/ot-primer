@@ -4,10 +4,12 @@ interface CommentProperties {
   comment: String;
   userID: String;
   key: number;
+  movieTitle: String;
+  vote: number;
 }
 
 export default function Comment(props: CommentProperties) {
-  const { comment, userID } = props;
+  const { comment, userID, movieTitle, vote } = props;
   return (
     <Box
       sx={{
@@ -26,7 +28,8 @@ export default function Comment(props: CommentProperties) {
           {comment}
         </Grid>
         <Grid item xs={4}>
-          Movie Title
+          {movieTitle}
+          {vote}
         </Grid>
         <Grid item xs={8}>
           {userID}

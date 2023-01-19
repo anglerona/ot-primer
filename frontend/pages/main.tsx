@@ -73,18 +73,12 @@ export default function Home() {
         key={review.reviewID}
         userID={review.userID}
         comment={review.comment.body}
+        movieTitle={review.movieName}
+        vote={review.vote}
       ></Comment>
       <br></br>
     </>
   ));
-
-  // interface ReviewProperties {
-  //   comment: CommentProperties;
-  //   userID: String;
-  //   reviewID: number;
-  //   movieName: String;
-  //   vote: number;
-  // }
 
   return (
     <>
