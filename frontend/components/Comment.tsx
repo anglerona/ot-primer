@@ -26,7 +26,7 @@ export default function Comment(props: CommentProperties) {
           <ThumbUp />{" "}
         </>
       );
-    } else {
+    } else if (vote === -1){
       return (
         <>
           <ThumbDownAlt />{" "}

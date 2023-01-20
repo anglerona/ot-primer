@@ -42,7 +42,7 @@ export default function Home() {
   const getReviews = async () => {
     try {
       const resp = await axios.get("http://localhost:8080/review");
-      setReviewList(resp.data);
+      setReviewList(resp.data.reverse());
       console.log(resp.data);
     } catch (err) {
       console.error(err);
