@@ -1,4 +1,4 @@
-package com.ot_primer.backend_server;
+package com.otprimer.backendserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

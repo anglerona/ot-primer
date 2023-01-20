@@ -30,8 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/AddComment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/AddComment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/Comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Comment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_server/src/test/java/com/ot_primer/backend_server/BackendServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend_server/src/test/java/com/otprimer/backendserver/BackendServerApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BackendServerApplicationTests">
     <configuration name="BackendServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -81,8 +80,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BackendServerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend_server" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ot_primer.backend_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.otprimer.backendserver" />
+      <option name="MAIN_CLASS_NAME" value="com.otprimer.backendserver.BackendServerApplicationTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BackendServerApplication" />
+      <item itemvalue="JUnit.BackendServerApplicationTests" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackendServerApplicationTests" />
         <item itemvalue="Application.BackendServerApplication" />
       </list>
     </recent_temporary>
@@ -123,25 +145,29 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1674077986252">
+    <state x="223" y="63" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1674250676714">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="223" y="63" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1674250676714" />
+    <state width="1493" height="311" key="GridCell.Tab.0.bottom" timestamp="1674250657520">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.bottom/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1674077986252">
+    <state width="1493" height="311" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1674250657520" />
+    <state width="1493" height="311" key="GridCell.Tab.0.center" timestamp="1674250657520">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.center/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1674077986252">
+    <state width="1493" height="311" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1674250657520" />
+    <state width="1493" height="311" key="GridCell.Tab.0.left" timestamp="1674250657519">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.left/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1674077986252">
+    <state width="1493" height="311" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1674250657519" />
+    <state width="1493" height="311" key="GridCell.Tab.0.right" timestamp="1674250657520">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1877" height="198" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1674069343051" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1674077986252" />
+    <state width="1493" height="311" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1674250657520" />
   </component>
 </project>
