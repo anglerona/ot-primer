@@ -33,8 +33,8 @@ export default function AddComment({ movies, username }: Review) {
 
   const handleMovie = (event, value) => {
     let movieid = 0;
-    for(let i = 0; i < 5; i++){
-      if(movies[i].title == value){
+    for (let i = 0; i < 5; i++) {
+      if (movies[i].title == value) {
         movieid = movies[i].id;
         break;
       }
@@ -47,7 +47,7 @@ export default function AddComment({ movies, username }: Review) {
       user: { id: username },
       comment: { body: comment },
       movie: { id: movie },
-      vote: {likeDislike: vote}
+      vote: { likeDislike: vote },
     });
     resp.data.json;
     Router.reload();
