@@ -23,12 +23,16 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:aryanExp" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="" />
+    <list default="true" id="5c33a949-4710-47a7-ae11-40f56d988860" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/AddComment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/AddComment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/Comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Comment.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +109,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="aryanExp" />
                       </list>
                     </value>
                   </entry>
