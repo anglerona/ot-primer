@@ -51,6 +51,7 @@ export default function Movie(props: MovieProperties) {
             isStatic={true}
             staticLikeCount={staticLikeCount}
             staticDislikeCount={staticDislikeCount}
+            setVote={setVote}
           ></Like>
         </CardContent>
       </div>
