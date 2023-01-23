@@ -1,8 +1,7 @@
 import { Box, TextField, Autocomplete, Button, Grid } from "@mui/material";
 import Like from "../components/Likes";
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { isConstructorDeclaration } from "typescript";
+import { useState } from "react";
 import Router from "next/router";
 
 interface Movies {
@@ -27,7 +26,6 @@ export default function AddComment({ movies, username }: Review) {
   const [vote, setVote] = useState(0);
 
   const handleComment = (e) => {
-    console.log(e.target.value);
     setComment(e.target.value);
   };
 

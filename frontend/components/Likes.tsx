@@ -1,17 +1,11 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import {
-  ThumbUpOffAlt,
-  ThumbDown,
-  ThumbUp,
-  ThumbDownAltOutlined,
-  SettingsVoiceTwoTone,
-} from "@mui/icons-material";
-import { Box, Grid, Divider } from "@mui/material";
+import { ThumbUpOffAlt, ThumbDownAltOutlined } from "@mui/icons-material";
+import { Box, Divider } from "@mui/material";
 interface LikeProperties {
   isStatic: boolean;
   staticLikeCount: number;
   staticDislikeCount: number;
-  setVote:  Dispatch<SetStateAction<number>>;
+  setVote: Dispatch<SetStateAction<number>>;
 }
 
 export default function Likes(props: LikeProperties) {
@@ -65,7 +59,6 @@ export default function Likes(props: LikeProperties) {
       setActiveBtn("dislike");
       setVote(-1);
     }
-    
   };
 
   return (
