@@ -13,7 +13,6 @@ export default function Movie(props: MovieProperties) {
   const { movieTitle, movieImg, movieId } = props;
   const [staticLikeCount, setStaticLikeCount] = useState(0);
   const [staticDislikeCount, setStaticDislikeCount] = useState(0);
-  const [vote, setVote] = useState(0);
 
   const getLikeCounts = async () => {
     try {

@@ -1,12 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import {
-  ThumbUpOffAlt,
-  ThumbDown,
-  ThumbUp,
-  ThumbDownAltOutlined,
-  SettingsVoiceTwoTone,
-  ThumbDownAlt,
-} from "@mui/icons-material";
+import { ThumbUp, ThumbDownAlt } from "@mui/icons-material";
 
 interface CommentProperties {
   comment: String;
@@ -18,7 +11,6 @@ interface CommentProperties {
 
 export default function Comment(props: CommentProperties) {
   const { comment, userID, movieTitle, vote } = props;
-  console.log(props);
   const voteIcon = () => {
     if (vote === 1) {
       return (
@@ -26,7 +18,7 @@ export default function Comment(props: CommentProperties) {
           <ThumbUp />{" "}
         </>
       );
-    } else if (vote === -1){
+    } else if (vote === -1) {
       return (
         <>
           <ThumbDownAlt />{" "}

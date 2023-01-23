@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Comment from "../components/Comment";
 import AddComment from "../components/AddComment";
-import { MovieRounded } from "@mui/icons-material";
+import { Button } from "@mui/material";
 
 interface MovieProperties {
   title: String;
@@ -42,8 +42,8 @@ export default function Home() {
   const getReviews = async () => {
     try {
       const resp = await axios.get("http://localhost:8080/review");
+
       setReviewList(resp.data.reverse());
-      console.log(resp.data);
     } catch (err) {
       console.error(err);
     }
@@ -59,20 +59,16 @@ export default function Home() {
   }, []);
 
   const listItems = movieList.map((movie) => (
-    <>
-      {console.log(movie)}
-      <Movie
-        key={movie.id}
-        movieTitle={movie.title}
-        movieImg={movie.poster_path}
-        movieId={movie.id}
-      ></Movie>
-    </>
+    <Movie
+      key={movie.id}
+      movieTitle={movie.title}
+      movieImg={movie.poster_path}
+      movieId={movie.id}
+    ></Movie>
   ));
 
   const listComments = reviewList.map((review) => (
     <>
-      {console.log(review)}
       <Comment
         key={review.reviewID}
         userID={review.username}
@@ -80,6 +76,7 @@ export default function Home() {
         movieTitle={review.movieName}
         vote={review.vote.likeDislike}
       ></Comment>
+      <br></br>
       <br></br>
     </>
   ));
@@ -108,7 +105,15 @@ export default function Home() {
         </div>
         <div className="log-out">
           <Link href="/">
-            <input type="submit" value="Logout" />
+            <Button
+              sx={{
+                color: "black",
+                borderColor: "black",
+                backgroundColor: "white",
+              }}
+            >
+              Log out
+            </Button>
           </Link>
         </div>
       </nav>
